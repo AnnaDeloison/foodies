@@ -2,3 +2,4 @@
 <p><%= @recipe.description %></p>
 <p> <%= @recipe.price %>$</p>
 <%= link_to "revenir au menu", recipes_path  %>
+<%= link_to "commander", new_recipe_order_path(@recipe)  %>
