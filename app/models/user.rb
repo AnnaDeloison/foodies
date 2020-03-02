@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :orders
+  has_many :scans
   validates :first_name, presence: true
   validates :last_name, presence: true
   validates :username, presence: true, uniqueness: true
@@ -15,7 +17,6 @@ class User < ApplicationRecord
   # validates :zip_code, format: { with: france_postal_code }
   validates :city, presence: true
   validates :phone_number, presence: true, uniqueness: true
-
-
+  
 end
 
