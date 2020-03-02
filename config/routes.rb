@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
-  get 'troubles/show'
+
   root to: 'pages#home'
-  resources :troubles, only: [:show]
   devise_for :users
+  resources :troubles, only: [:show]
+  resources :recipes, only: [:index, :show] do
+    resources :orders, only: [:new, :create]
+  end
+  get 'order_confirmation' to 'orders#success', as: :success
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
 
