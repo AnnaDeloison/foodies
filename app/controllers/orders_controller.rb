@@ -4,14 +4,15 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(street_name: params[:street_name], street_number: params[:street_number], city: params[:city], zip_code: params[:zip_code], order_date: params[:order_date], order_hour[:order_hour])
+    @order = Order.new(street_name: params[:street_name], street_number: params[:street_number], city: params[:city], zip_code: params[:zip_code], order_date: params[:order_date], order_hour: params[:order_hour])
     @order.user = current_user
     @order.recipe = Recipe.find(params[:recipe_id])
 
-    if @order.save
-      redirect_to success_path(@order)
-    else
-      render :new
+      if @order.save
+        redirect_to success_path(@order)
+      else
+        render :new
+      end
   end
 
   def success
