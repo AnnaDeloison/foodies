@@ -1,0 +1,10 @@
+<div class="cards">
+  <% @recipes.each do |recipe| %>
+    <div class="card-trip">
+        <h2><%=recipe.name%></h2>
+        <h6><%= recipe.price %></h6>
+        <p><%=recipe.description%></p>
+    </div>
+    <%= link_to "voir la recette", recipe_path(recipe) %>
+    <% end %>
+</div>
