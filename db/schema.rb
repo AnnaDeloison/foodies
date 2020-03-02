@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_140039) do
+ActiveRecord::Schema.define(version: 2020_03_02_153313) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,12 @@ ActiveRecord::Schema.define(version: 2020_03_02_140039) do
     t.bigint "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "street_name"
+    t.string "street_number"
+    t.string "city"
+    t.string "zip_code"
+    t.date "order_date"
+    t.string "order_hour"
     t.index ["recipe_id"], name: "index_orders_on_recipe_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -30,6 +36,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_140039) do
     t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "sku"
   end
 
   create_table "reviews", force: :cascade do |t|
