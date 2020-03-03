@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-trouble1 = Trouble.create!(name: "chimio")
+trouble1 = Trouble.create!(name: "Chimiothérapie")
 # test pour recipes dans index et show
 recipes1 = Recipe.create(name: "soupe", description: "soupe patate douce", price: 15)
 
