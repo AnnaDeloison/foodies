@@ -1,5 +1,13 @@
-<h1><%= @recipe.name %></h1>
-<p><%= @recipe.description %></p>
+<div id="nameoftherecipe"> <h1> <%= @recipe.name %> </h1> </div>
+
+<%= link_to "revenir au menu", recipes_path, id: "bouton-retour" %>
+
+<h2 id="ingredientsheader">Ingrédients</h2>
+<div id="descriptionoftherecipe"> <p> <%= @recipe.description %> </p> </div>
+
 <p> <%= @recipe.price %>$</p>
-<%= link_to "revenir au menu", recipes_path  %>
-<%= link_to "commander", new_recipe_order_path(@recipe)  %>
+
+<div id="bouton-et-texte-commander">
+  <%= link_to "", new_recipe_order_path(@recipe), id: "bouton-commander" %>
+  <h2 id="texte-commander">COMMANDER</h2>
+</div>
