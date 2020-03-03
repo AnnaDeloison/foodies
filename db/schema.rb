@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_02_153313) do
+ActiveRecord::Schema.define(version: 2020_03_03_133724) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,10 @@ ActiveRecord::Schema.define(version: 2020_03_02_153313) do
     t.string "zip_code"
     t.date "order_date"
     t.string "order_hour"
+    t.string "state"
+    t.string "recipe_sku"
+    t.integer "amount_cents", default: 0, null: false
+    t.string "checkout_session_id"
     t.index ["recipe_id"], name: "index_orders_on_recipe_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -33,10 +37,11 @@ ActiveRecord::Schema.define(version: 2020_03_02_153313) do
   create_table "recipes", force: :cascade do |t|
     t.string "name"
     t.text "description"
-    t.float "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "sku"
+    t.string "photo_url"
+    t.integer "price_cents", default: 0, null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -83,11 +88,7 @@ ActiveRecord::Schema.define(version: 2020_03_02_153313) do
     t.datetime "updated_at", null: false
     t.string "first_name"
     t.string "last_name"
-    t.string "street_name"
-    t.string "street_number"
-    t.integer "zip_code"
-    t.string "city"
-    t.string "phone_number"
+    t.string "username"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
