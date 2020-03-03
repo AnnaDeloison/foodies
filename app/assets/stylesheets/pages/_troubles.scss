@@ -1,0 +1,37 @@
+.background-color {
+  background-color: #004445;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+}
+
+.food-trouble {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-image: url(https://images.unsplash.com/photo-1566373049939-704ea187ef98?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60);
+  background-size: cover;
+  color: white;
+  padding-top: 50px;
+  height: 75vh;
+}
+
+.food-trouble h3 {
+  text-align: center;
+}
+
+.paragraphe-trouble {
+  font-family: 'Montserrat';
+  text-align: justify;
+  font-size: 12px;
+  width: 50vh;
+  min-height: 300px;
+  font-weight: 300;
+  background-color: #004445;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
