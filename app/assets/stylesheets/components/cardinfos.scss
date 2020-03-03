@@ -1,0 +1,56 @@
+.card-infos {
+  padding-top: 45px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-info {
+  height: 370px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.text-card-info {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 254px;
+  height: 73px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.card-info-picture > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  padding: 0px;
+  object-fit: cover;
+}
+
+.little-card-info {
+  width: 100px;
+  height: 100px;
+  padding: 0px;
+  border-radius: 100%;
+  background-color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 50px;
+  right: 55px;
+}
+
+#little-card-info  {
+  text-align: center;
+  display: block;
+  padding: 0px;
+  position: absolute;
+  bottom: 22px;
+  right: 8px;
+
+
+}
