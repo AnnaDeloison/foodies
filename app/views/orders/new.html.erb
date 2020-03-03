@@ -1,10 +1,22 @@
-<h1>New order</h1>
-<form action="/create" class="new-booking">
-  <input type="text" name="street_name" placeholder="Nom de la voie">
-  <input type="text" name="street_number" placeholder="Numéro de la voie">
-  <input type="text" name="zip_code" placeholder="Code postal">
-  <input type="text" name="city" placeholder="Ville">
-  <input type="date" name="order_date" placeholder="Jour de la commande">
-  <input type="text" name="order_hour" placeholder="Heure de la commande">
-  <input type="submit" value="Commander">
-  </form>
+<!-- <h1>New order</h1>
+
+<form action="orders_path" method="post" class="new-booking">
+<input type="text" name="street_name" placeholder="Nom de la voie">
+<input type="text" name="street_number" placeholder="Numéro de la voie">
+<input type="text" name="zip_code" placeholder="Code postal">
+<input type="text" name="city" placeholder="Ville">
+<input type="date" name="order_date" placeholder="Jour de la commande">
+<input type="text" name="order_hour" placeholder="Heure de la commande">
+<input type="submit" value="Commander">
+</form> -->
+
+  <%= simple_form_for @order, url: recipe_orders_path, method: :post, class: "action" do |f| %>
+  <%= f.input :recipe_id, :as => :hidden, :input_html => { :value => params[:recipe_id] } %>
+  <%= f.input :street_number, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: false, placeholder: "Numéro de la voie" %>
+  <%= f.input :street_name, input_html: {class: "form-control", id: "exampleInputPassword1"}, label: false, placeholder: "Nom de la voie" %>
+  <%= f.input :city, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: false, placeholder: "Ville" %>
+  <%= f.input :zip_code, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: false, placeholder: "Code postal" %>
+  <%= f.input :order_date, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: false, placeholder: "Date" %>
+  <%= f.input :order_hour, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: false, placeholder: "Heure de la livraison" %>
+  <%= f.submit "Commander", id: "lebouton" %>
+  <% end %>
