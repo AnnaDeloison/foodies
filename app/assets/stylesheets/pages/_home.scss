@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+body {
+  background-color: white;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.text {
+  width: 370px;
+}
+
+.text .infos {
+  padding-top: 135px;
+  text-align: left;
+  margin-left: 65px;
+}
+
+.text #btn-text {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  background-color: yellow;
+  margin: 5px;
+}
+
