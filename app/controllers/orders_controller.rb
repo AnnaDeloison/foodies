@@ -4,20 +4,31 @@ class OrdersController < ApplicationController
   end
 
   def create
-    @order = Order.new(street_name: params[:street_name], street_number: params[:street_number], city: params[:city], zip_code: params[:zip_code], order_date: params[:order_date], order_hour: params[:order_hour])
+    @order = Order.new(order_params)
     @order.user = current_user
     @order.recipe = Recipe.find(params[:recipe_id])
 
       if @order.save
         redirect_to success_path(@order)
       else
-        render :new
+        p "mistake"
       end
   end
 
   def success
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:order_id])
     @order.recipe = Recipe.find(@order.recipe_id)
   end
 
+private
+
+  def order_params
+    params.require(:order).permit(:street_name, :street_number, :city, :zip_code, :order_date, :order_hour, :photo)
+  end
+
+  def booking_params
+    params.require(:booking).permit(:booking_date, :user_id, :barrow_id)
+  end
+
 end
+
