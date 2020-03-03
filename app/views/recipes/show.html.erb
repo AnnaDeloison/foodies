@@ -1,13 +1,17 @@
-<div id="nameoftherecipe"> <h1> <%= @recipe.name %> </h1> </div>
+<body id="body-of-recipes-page">
+  <div id="name-of-the-recipe"> <h1> <%= @recipe.name %> </h1> </div>
 
-<%= link_to "revenir au menu", recipes_path, id: "bouton-retour" %>
+  <%= link_to "", recipes_path, id: "bouton-retour" %>
 
-<h2 id="ingredientsheader">Ingrédients</h2>
-<div id="descriptionoftherecipe"> <p> <%= @recipe.description %> </p> </div>
+  <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/heart-healthy-food-1580231690.jpg" id="photo-dans-show" alt="food">
 
-<p> <%= @recipe.price %>$</p>
+  <h2 id="ingredients-header"> Ingrédients </h2>
+  <div class="container" id="description-of-the-recipe"> <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p></div>
 
-<div id="bouton-et-texte-commander">
-  <%= link_to "", new_recipe_order_path(@recipe), id: "bouton-commander" %>
-  <h2 id="texte-commander">COMMANDER</h2>
-</div>
+  <!-- <p> <%= @recipe.price %>$</p> -->
+
+  <div id="bouton-et-texte-commander">
+    <%= link_to "", new_recipe_order_path(@recipe), id: "bouton-commander" %>
+    <h2 id="texte-commander"> COMMANDER </h2>
+  </div>
+</body>
