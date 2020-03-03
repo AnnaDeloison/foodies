@@ -1,5 +1,18 @@
-<h1><%= @recipe.name %></h1>
-<p><%= @recipe.description %></p>
-<p>Amount: <%= humanized_money_with_symbol(@recipe.price) %></p>
-<%= link_to "revenir au menu", recipes_path  %>
-<%= link_to "commander", new_recipe_order_path(@recipe)  %>
+
+<body id="body-of-recipes-page">
+  <div id="name-of-the-recipe"> <h1 id="font-size-of-recipe-name"> <%= @recipe.name %> </h1> </div>
+
+  <%= link_to "", recipes_path, id: "bouton-retour" %>
+
+  <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/heart-healthy-food-1580231690.jpg" id="photo-dans-show" alt="food">
+
+  <h2 id="ingredients-header"> Ingrédients </h2>
+  <div class="container" id="description-of-the-recipe"> <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p></div>
+
+ <p>Amount: <%= humanized_money_with_symbol(@recipe.price) %></p>
+
+  <div id="bouton-et-texte-commander">
+    <%= link_to "", new_recipe_order_path(@recipe), id: "bouton-commander" %>
+    <h2 id="texte-commander"> COMMANDER </h2>
+  </div>
+</body>

@@ -1,6 +1,35 @@
-<h1>Troubles#show</h1>
-<p>Find me in app/views/troubles/show.html.erb</p>
-<%= @trouble.name %>
+<div class="container">
+
+<div class="background-color">
+<h1><%= @trouble.name%></h1>
+</div>
+
+<div class="food-trouble rounded-pill">
+
+  <div>
+    <h3>L'impact de la <%= @trouble.name%></h3>
+    <h3>sur l'alimentation</h3>
+    <div class="paragraphe-trouble">
+      <p>L’alimentation d’une personne traitée pour un cancer peut être considérablement transformée.
+      Ces troubles peuvent être liés au cancer lui-même et à sa localisation, aux effets secondaires des traitements, mais aussi au stress et aux changements de rythme de vie. Parfois douloureux, ils peuvent causer des difficultés pour consommer les aliments et affecter considérablement le quotidien des patients. Ces modifications peuvent avoir un impact sur l’état général du patient, tant physique que psychologique.</p>
+    </div>
+  </div>
+
+  <div>
+    <h3>Les conseils pour mieux</h3>
+    <h3>s'alimenter</h3>
+    <div class="paragraphe-trouble">
+    <p>En cas de très faible appétit, chaque bouchée compte ! Préférez les petits volumes fortement caloriques comme les amandes, le jaune d’œuf, le gruyère. N’hésitez pas à enrichir l’apport calorique de vos aliments, par exemple en ajoutant du miel à une compote de pommes ou de la crème dans vos plats. Vous devez manger utile. Privilégiez les aliments et boissons riches en protéines et en calories. Pensez aux protéines végétales (céréales, cacahuètes, amandes, tofu...) qui vous seront utiles en cas de perte d’appétit et peuvent venir compenser les protéines animales.</p>
+    </div>
+  </div>
+
+</div>
+
+
+
+
 <% @recipes.each do |recipe| %>
   <%= recipe.name %>
 <% end %>
+
+</div>
