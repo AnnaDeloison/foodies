@@ -9,6 +9,6 @@
 
 trouble1 = Trouble.create!(name: "chimio")
 # test pour recipes dans index et show
-recipes1 = Recipe.create(name: "soupe", description: "soupe patate douce", price: 15)
+recipes1 = Recipe.create(sku: 'soupe à la patate douce', name: "soupe patate douce", description: "soupe patate douce", price: 15, photo_url: "https://static.cuisineaz.com/400x320/i135820-soupe-a-la-patate-douce.jpeg")
 
 recipes2 = Recipe.create(name: "pates", description: "pates au beurre", price: 12.5)

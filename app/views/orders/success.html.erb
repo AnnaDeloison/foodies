@@ -1,5 +1,6 @@
 <h1>Felicitations</h1>
 <p>Vous avez commandé <%= @order.recipe.name %></p>
+<%= image_tag @order.recipe.photo_url %>
 <p>Votre commande arrivera le: <%= @order.order_date %> à <%= @order.order_hour %>. </p>
 <p>Elle sera livrée au <%= @order.street_number %> <%= @order.street_name %></p>
 <p><%= @order.zip_code %> <%= @order.city %></p>
