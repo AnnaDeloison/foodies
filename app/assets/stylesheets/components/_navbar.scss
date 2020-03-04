@@ -4,6 +4,8 @@
   background-color: transparent;
   position: relative;
   z-index: 100;
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menu-central {
@@ -19,8 +21,10 @@ a
   padding: 0px 5px;
 }
 
-.avatar-picture {
+img {
   border-radius: 100%;
+  display: block;
+  align-items: end;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -31,10 +35,6 @@ a
   width: 200px;
 }
 
-.connexion {
-  align-content: flex-end;
-  display: block;
-}
 
 
 .logo {
