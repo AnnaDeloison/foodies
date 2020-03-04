@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
     <% end %>
 
@@ -36,4 +36,22 @@
       </span>
     </button>
   </div>
+</div>
+
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+  <div class="menu-central">
+    <div id="menu-central">
+      <a>Histoire</a>
+    </div>
+    <div id="menu-central">
+      <a href="./recipes">Recette</a>
+    </div>
+    <div id="menu-central">
+      <a>Troubles</a>
+    </div>
+  </div>
+
+
 </div>
