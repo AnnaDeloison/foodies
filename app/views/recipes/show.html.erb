@@ -2,7 +2,9 @@
 <body id="body-of-recipes-page">
   <div id="name-of-the-recipe"> <h1 id="font-size-of-recipe-name"> <%= @recipe.name %> </h1> </div>
 
-  <%= link_to "", recipes_path, id: "bouton-retour" %>
+  <%= link_to recipes_path, id: "bouton-retour" do %>
+    <%= image_tag "arrow.svg", alt: "alttext", id: "fleche-bouton-rtr" %>
+  <% end %>
 
   <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/heart-healthy-food-1580231690.jpg" id="photo-dans-show" alt="food">
 
