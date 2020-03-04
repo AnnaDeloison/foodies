@@ -1,49 +1,50 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+    <%= link_to root_path, class: "navbar-brand logo " do %>
+    <%= image_tag "logoV2.png" %>
+      <% end %>
 
-  <div class="menu-central">
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Histoire</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Recettes</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="avatar dropdown-toggle nav-link" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Troubles</a>
+    <div class="menu-central">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a  href="#">Histoire</a>
+          </li>
+          <li class="nav-item ">
+            <a class="" href="./recipes">Recettes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Troubles</a>
 
 
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-          </div>
-        </li>
-      </ul>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="./troubles/1">chimio</a>
+              <a class="dropdown-item" href="#">Another action</a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
+
+
+      <div class="connexion">
+        <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+              <%= image_tag "https://media-exp1.licdn.com/dms/image/C5603AQHvPAOmAt9jMg/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=gnf-hifQs9ddzieqnbecwLZTBGWWpyoH3AGhM0qIGSo", width: 40, height: 40, crop: :fill, class: "avatar-picture dropdown-toggle image", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          </li>
+        <% end %>
+      </div>
+
   </div>
 
-
-    <div class="connexion">
-      <% if user_signed_in? %>
-      <li class="nav-item dropdown">
-            <%= image_tag "https://media-exp1.licdn.com/dms/image/C5603AQHvPAOmAt9jMg/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=gnf-hifQs9ddzieqnbecwLZTBGWWpyoH3AGhM0qIGSo", class: "avatar dropdown-toggle image", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </div>
-
-</div>
 
 
 

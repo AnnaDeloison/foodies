@@ -1,38 +1,47 @@
 .navbar-lewagon {
   display: flex;
-  background-color: transparent;
   justify-content: space-between;
+  background-color: transparent;
+  position: relative;
+  z-index: 100;
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .menu-central {
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
-#menu-central {
-  padding: 0px 32px;
-
+a
+  {
+  color: white;
+  padding: 0px 5px;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.connexion {
+img {
+  border-radius: 100%;
   display: block;
-  align-item: right;
+  align-items: end;
 }
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 200px;
+}
+
+
+
+.logo {
+  color: white
+}
+
+.logo span {
+  color: yellow;
+}
+
