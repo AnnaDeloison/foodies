@@ -1,18 +1,19 @@
 .navbar-lewagon {
   display: flex;
-  background-color: transparent;
   justify-content: space-between;
+  background: white;
+  position: relative;
 }
 
 .menu-central {
-  display: flex;
+  display: block;
   margin-left: auto;
   margin-right: auto;
+
 }
 
-#menu-central {
-  padding: 0px 32px;
-
+.avatar-picture {
+  border-radius: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -20,19 +21,23 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+  width: 200px;
+  padding: 0;
 
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
 }
 
 .connexion {
+  align-content: flex-end;
   display: block;
-  align-item: right;
+}
+
+
+.logo {
+  position: absolute;
+  left: 14px;
+  top: 14px;
+}
+
+.logo span {
+  color: yellow;
 }
