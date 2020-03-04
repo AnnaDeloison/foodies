@@ -1,20 +1,21 @@
-
 <body id="body-of-recipes-page">
-  <div id="name-of-the-recipe"> <h1 id="font-size-of-recipe-name"> <%= @recipe.name %> </h1> </div>
+  <div class="container">
+    <div id="name-of-the-recipe"> <h1 id="font-size-of-recipe-name"> <%= @recipe.name %> </h1> </div>
 
-  <%= link_to recipes_path, id: "bouton-retour" do %>
-    <%= image_tag "arrow.svg", alt: "alttext", id: "fleche-bouton-rtr" %>
-  <% end %>
+    <%= link_to recipes_path, id: "bouton-retour" do %>
+      <%= image_tag "arrow.svg", alt: "alttext", id: "fleche-bouton-rtr" %>
+    <% end %>
 
-  <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/heart-healthy-food-1580231690.jpg" id="photo-dans-show" alt="food">
+    <%= image_tag @recipe.photo_url, id: "photo-dans-show", alt: "food" %>
 
-  <h2 id="ingredients-header"> Ingrédients </h2>
-  <div class="container" id="description-of-the-recipe"> <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p></div>
+    <h2 id="ingredients-header"> Ingrédients </h2>
+    <div class="container" id="description-of-the-recipe"> <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p></div>
 
- <p>Amount: <%= humanized_money_with_symbol(@recipe.price) %></p>
-
-  <div id="bouton-et-texte-commander">
-    <%= link_to "", new_recipe_order_path(@recipe), id: "bouton-commander" %>
-    <h2 id="texte-commander"> COMMANDER </h2>
+    <div id="bouton-et-texte-commander">
+      <%= link_to new_recipe_order_path(@recipe), id: "bouton-commander" do %>
+        <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
+      <% end %>
+      <h2 id="texte-commander"> COMMANDER </h2>
+    </div>
   </div>
 </body>
