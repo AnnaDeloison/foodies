@@ -23,7 +23,7 @@
 
       <% @recipes.each do |recipe| %>
         <div class="card-trip">
-          <img src="https://images.unsplash.com/photo-1514843319620-4f042827c481?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+          <%= image_tag recipe.photo_url %>
             <div class="card-trip-infos">
               <h2><%=recipe.name.capitalize%></h2>
               <p>Price: <%= humanized_money_with_symbol(recipe.price) %></p>
