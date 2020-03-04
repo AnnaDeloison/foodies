@@ -1,23 +1,44 @@
 // Specific CSS for your home-page
 
-body {
-  background-color: white;
+
+    // width: 100%;
+    // -webkit-clip-path: ellipse(79% 86% at 50% 1%);
+    // clip-path: ellipse(79% 86% at 50% 1%);
+    // height: 616px;
+    // display: block;
+    // position: absolute;
+    // top: 0;
+    // z-index: 0;
+
+.global::before {
+  content: "";
+  background-image: url("https://images.unsplash.com/photo-1541770263514-110ccd04402a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60");
+  clip-path: ellipse(58% 88% at 50% 3%);
+  width: 100%;
+  height: 616px;
+  display: block;
+    position: absolute;
+    top: 0;
+    z-index: 0;
 }
 
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
+  z-index: 100;
 }
 
 .text {
   width: 370px;
+  z-index: 100;
 }
 
 .text .infos {
   padding-top: 135px;
   text-align: left;
   margin-left: 65px;
+  color: white;
 }
 
 .text #btn-text {
@@ -27,7 +48,6 @@ body {
   background-color: yellow;
   margin: 5px;
 }
-
 
 .food-specialiste {
   margin-top: 50px;
