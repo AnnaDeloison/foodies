@@ -1,0 +1,43 @@
+.filtre-et-recettes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filtres {
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  border-radius: 10%;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  color: #004445;
+}
+
+.filtres h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.filtres h4 {
+  font-size: 15px;
+}
+
+.filtres p {
+  font-size: 10px;
+}
+
+
+.searchbar {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.champ {
+color: #F8B400;
+}
+
+
+input::-webkit-input-placeholder{
+  color: #F8B400;
+}
+

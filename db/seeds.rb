@@ -5,6 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+TroubleRecipe.destroy_all
+Trouble.destroy_all
+Recipe.destroy_all
 
 
 trouble1 = Trouble.create!(name: "Chimiothérapie")
@@ -14,3 +17,8 @@ recipes2 = Recipe.create(sku: 'Saumon aux asperges', name: "Saumon aux asperges"
 recipes3 = Recipe.create(sku: 'Poulet au brocolis', name: "Poulet au brocolis", description: "Le poulet au brocolis, tout simplement délicieux !", price: 12, photo_url: "https://assets.kraftfoods.com/recipe_images/181573-181574.jpg")
 recipes4 = Recipe.create(sku: 'Dos de cabillaud - chou fleur', name: "Dos de cabillaud, chorizo et chou-fleur rôti", description: "Un cabillaud fondant, de délicats pétales de chorizo et du chou-fleur rôti", price: 18.80, photo_url: "https://couteaux-et-tirebouchons.com/wp-content/uploads/2017/02/Cabillaud-au-chorizo.jpg")
 recipes5 = Recipe.create(sku: 'Crevettes au curry', name: "Crevettes au curry", description: "De délicieuses crevettes au curry", price: 13.5, photo_url: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/239755.jpg")
+
+TroubleRecipe.create(recipe_id: recipes1.id, trouble_id: trouble1.id)
+TroubleRecipe.create(recipe_id: recipes2.id, trouble_id: trouble1.id)
+TroubleRecipe.create(recipe_id: recipes3.id, trouble_id: trouble1.id)
+

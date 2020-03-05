@@ -3,6 +3,8 @@
 <div class="background-color">
 <h1><%= @trouble.name%></h1>
 </div>
+</div>
+
 
 <div class="food-trouble rounded-pill">
 
@@ -10,6 +12,7 @@
     <h3>L'impact de la <%= @trouble.name%></h3>
     <h3>sur l'alimentation</h3>
     <div class="paragraphe-trouble">
+
       <p>L’alimentation d’une personne traitée pour un cancer peut être considérablement transformée.
       Ces troubles peuvent être liés au cancer lui-même et à sa localisation, aux effets secondaires des traitements, mais aussi au stress et aux changements de rythme de vie. Parfois douloureux, ils peuvent causer des difficultés pour consommer les aliments et affecter considérablement le quotidien des patients. Ces modifications peuvent avoir un impact sur l’état général du patient, tant physique que psychologique.</p>
       <hr width="30%" color="white">
@@ -27,11 +30,29 @@
 
 </div>
 
+<div class="container">
+
+  <br>
+  <br>
+  <br>
+
+  <h1 class="titre">Commandez les plats qui vous conviennent</h1>
+  <br>
+  <br>
+
+  <div class="cards">
 
 
-
-<% @recipes.each do |recipe| %>
-  <%= recipe.name %>
-<% end %>
+  <% @trouble.recipes.each do |recipe| %>
+    <div class="card-trip">
+      <%= image_tag recipe.photo_url %>
+        <div class="card-trip-infos">
+          <h2><%=recipe.name.capitalize%></h2>
+          <p>Price: <%= humanized_money_with_symbol(recipe.price) %></p>
+          <%= link_to "Commander", recipe_path(recipe), class: "link" %>
+        </div>
+    </div>
+  <% end %>
+  </div>
 
 </div>

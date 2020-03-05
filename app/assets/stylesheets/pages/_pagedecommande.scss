@@ -1,0 +1,35 @@
+.form-control {
+  border: 2px solid #004445;
+  width: 412px;
+  height: 35px;
+}
+
+#form-page-commander {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  color: #004445;
+}
+
+#container-du-forme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lebouton {
+  border: none;
+  background-image:
+    url(plus.svg);
+  background-position:
+    center, /* this positions the first image */
+    center; /* this positions the second image */
+  background-repeat:
+    no-repeat; /* this applies to both images */
+}
+
+#exampleInputTime1 {
+  width: 100%;
+  margin-left: -20px;
+  space-between: none;
+}

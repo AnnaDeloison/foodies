@@ -1,10 +1,41 @@
-<div class="cards">
-  <% @recipes.each do |recipe| %>
-    <div class="card-trip">
-        <h2><%=recipe.name%></h2>
-        <h6>Price: <%= humanized_money_with_symbol(recipe.price) %></h6>
-        <p><%=recipe.description%></p>
+<div class="container">
+
+  <div class="searchbar">
+      <form action="" class="searchbar">
+          <input class="champ" type="text" placeholder="Recettes"/>
+          <input class="bouton" type="button" value="GO" />
+      </form>
+  </div>
+
+<br>
+<br>
+
+  <div class="filtre-et-recettes">
+
+    <div class="filtres item col-sm-2">
+      <h3>Filtrer par</h3>
+      <h4>Troubles</h4>
+      <p>Chimio</p>
     </div>
-    <%= link_to "voir la recette", recipe_path(recipe) %>
-    <% end %>
+
+
+    <div class="cards item col-sm-10">
+
+      <% @recipes.each do |recipe| %>
+        <div class="card-trip">
+          <%= image_tag recipe.photo_url %>
+            <div class="card-trip-infos">
+              <h2><%=recipe.name.capitalize%></h2>
+              <p>Price: <%= humanized_money_with_symbol(recipe.price) %></p>
+              <%= link_to "Commander", recipe_path(recipe) %>
+            </div>
+        </div>
+      <% end %>
+    </div>
+
+
+  </div>
+
 </div>
+
+
