@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-between;
   z-index: 100;
-
+  margin: 0px 100px;
 }
 
 .filtres {
@@ -70,6 +70,13 @@ margin-left: 8px;
 
 .champ {
 color: #F8B400;
+border: none;
+font-weight: 500;
+font-size: 15px;
+  width: 844px;
+  height: 56px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
 }
 
 
@@ -77,3 +84,36 @@ input::-webkit-input-placeholder{
   color: #F8B400;
 }
 
+body {
+  background-color: white;
+}
+
+#nom-et-prix {
+  max-width: 200px;
+}
+
+#para-prix {
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+#cardindex {
+  padding-bottom:15px;
+}
+
+#bouton-et-prix {
+  display: flex;
+  flex-direction: column;
+}
+
+#recipe-name {
+  font-size: 18px;
+  color: #004445;
+}
+
+.container-index {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  align-items: center;
+}
