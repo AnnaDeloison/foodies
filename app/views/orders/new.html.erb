@@ -10,7 +10,7 @@
 <input type="submit" value="Commander">
 </form> -->
 
-  <%= simple_form_for @order, url: recipe_orders_path, method: :post, class: "action" do |f| %>
+  <%= simple_form_for @order, method: :post, class: "action" do |f| %>
   <%= f.input :recipe_id, :as => :hidden, :input_html => { :value => params[:recipe_id] } %>
   <%= f.input :street_number, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: false, placeholder: "Numéro de la voie" %>
   <%= f.input :street_name, input_html: {class: "form-control", id: "exampleInputPassword1"}, label: false, placeholder: "Nom de la voie" %>
