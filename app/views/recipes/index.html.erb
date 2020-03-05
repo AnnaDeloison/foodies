@@ -1,40 +1,51 @@
+
+
+<div class="global-index">
+<br>
+<br>
+<br>
+<br>
+<div class="searchbar "><h2 class="searchbar">Nos Bocaux</h2></div>
+<br>
+<br>
+<br>
+</div>
 <div class="container">
 
-  <div class="searchbar">
-      <form action="" class="searchbar">
-          <input class="champ" type="text" placeholder="Recettes"/>
-          <input class="bouton" type="button" value="GO" />
-      </form>
-  </div>
-
-<br>
-<br>
-
-  <div class="filtre-et-recettes">
-
-    <div class="filtres item col-sm-2">
-      <h3>Filtrer par</h3>
-      <h4>Troubles</h4>
-      <p>Chimio</p>
+   <div class="searchbar">
+        <form action="" class="searchbar ">
+            <input class="champ" type="text" placeholder="Recettes"/>
+        </form>
     </div>
 
+  <br>
+  <br>
 
-    <div class="cards item col-sm-10">
+    <div class="filtre-et-recettes">
 
-      <% @recipes.each do |recipe| %>
-        <div class="card-trip">
-          <%= image_tag recipe.photo_url %>
-            <div class="card-trip-infos">
-              <h2><%=recipe.name.capitalize%></h2>
-              <p>Price: <%= humanized_money_with_symbol(recipe.price) %></p>
-              <%= link_to "Commander", recipe_path(recipe) %>
-            </div>
-        </div>
-      <% end %>
+      <div class="filtres item col-sm-2">
+        <h3>Filtrer par</h3>
+        <h4>Troubles</h4>
+        <p>Chimio</p>
+      </div>
+
+
+      <div class="cards item col-sm-10">
+
+        <% @recipes.each do |recipe| %>
+          <div class="card-trip">
+            <%= image_tag recipe.photo_url %>
+              <div class="card-trip-infos">
+                <h2><%=recipe.name.capitalize%></h2>
+                <p>Price: <%= humanized_money_with_symbol(recipe.price) %></p>
+                <%= link_to "Commander", recipe_path(recipe) %>
+              </div>
+          </div>
+        <% end %>
+      </div>
+
+
     </div>
-
-
-  </div>
 
 </div>
 

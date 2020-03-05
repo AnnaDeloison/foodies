@@ -1,21 +1,27 @@
 <div class="container">
-  <div id="form-page-commander">
 
-    <div id="container-du-forme">
-      <%= simple_form_for @order, url: recipe_orders_path, method: :post, class: "action" do |f| %>
-      <%= f.input :recipe_id, :as => :hidden, :input_html => { :value => params[:recipe_id] } %>
-      <%= f.input :street_number, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Numéro de la rue", required: false, placeholder: "20..." %>
-      <%= f.input :street_name, input_html: {class: "form-control", id: "exampleInputPassword1"}, label: "Nom de la rue",required: false,  placeholder: "Rue des Capucins..." %>
-      <%= f.input :zip_code, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Code postal",required: false, placeholder: "69001..." %>
-      <%= f.input :city, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Ville",required: false, placeholder: "Lyon..." %>
-      <%= f.input :order_date, input_html: {id: "exampleInputTime1"}, label: "Date",required: false, placeholder: "25" %>
-      <%= f.input :order_hour, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Heure de la livraison",required: false, placeholder: "12:30..." %>
+    <div id="form-page-commander">
+
+        <div id="container-du-forme">
+          <%= simple_form_for @order, method: :post, class: "action" do |f| %>
+          <%= f.input :recipe_id, :as => :hidden, :input_html => { :value => params[:recipe_id] } %>
+          <%= f.input :street_number, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Numéro de la rue", required: false, placeholder: "20..." %>
+          <%= f.input :street_name, input_html: {class: "form-control", id: "exampleInputPassword1"}, label: "Nom de la rue",required: false,  placeholder: "Rue des Capucins..." %>
+          <%= f.input :zip_code, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Code postal",required: false, placeholder: "69001..." %>
+          <%= f.input :city, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Ville",required: false, placeholder: "Lyon..." %>
+          <div id="champ-date">
+            <%= f.input :order_date, input_html: {id: "exampleInputTime1"}, label: "Date",required: false, placeholder: "25" %>
+          </div>
+          <%= f.input :order_hour, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Heure de la livraison",required: false, placeholder: "12:30..." %>
+        </div>
+
+        <div id="bouton-et-texte-commander">
+          <%= f.submit "", class: "lebouton", id: "bouton-commander" %>
+          <h2 id="texte-commander"> COMMANDER </h2>
+        </div>
+        <% end %>
+
     </div>
 
-    <div id="bouton-et-texte-commander">
-      <%= f.submit "", class: "lebouton", id: "bouton-commander" %>
-      <h2 id="texte-commander"> COMMANDER </h2>
-    </div>
-    <% end %>
-  </div>
 </div>
+

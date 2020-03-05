@@ -7,35 +7,48 @@ class OrdersController < ApplicationController
     @order = Order.new
   end
 
+
   def create
-    @recipe = Recipe.find(params[:recipe_id])
-    recipe_sku = Recipe.find(params[:recipe_id]).sku
-    amount = Recipe.find(params[:recipe_id]).price_cents
+    # @recipe = Recipe.find(params[:recipe_id])
+    # recipe_sku = Recipe.find(params[:recipe_id]).sku
+    # amount = Recipe.find(params[:recipe_id]).price_cents
     state = 'pending'
     user = current_user
-    all_params = order_params.merge(user: user, recipe: @recipe, recipe_sku: recipe_sku, amount: amount, state: state)
+    all_params = order_params.merge(user: user, state: state)
     @order = Order.create!(all_params)
+    session[:cart].each do |element|
+    Item.create!(recipe_id: element["id"], order_id: @order.id)
+    end
+
+    # cart.each ... Item.create
+
+    # session[:cart] = nil
+
+    line_items = @order.recipes.map do |recipe|
+      {
+        name: recipe.sku,
+        images: [recipe.photo_url],
+        amount: recipe.price_cents,
+        currency: 'eur',
+        quantity: 1
+      }
+    end
 
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
-      line_items: [{
-        name: @recipe.sku,
-        images: [@recipe.photo_url],
-        amount: @recipe.price_cents,
-        currency: 'eur',
-        quantity: 1
-      }],
-      success_url: recipe_order_url(@recipe.id, @order.id),
-      cancel_url: recipe_url(@recipe.id)
+      line_items: line_items,
+      success_url: success_url(@order.id),
+      cancel_url: show_cart_url
     )
 
+
     @order.update(checkout_session_id: session.id)
-    redirect_to new_recipe_order_payment_path(@recipe.id, @order.id)
+    redirect_to new_order_payment_path(@order.id)
   end
 
   def success
     @order = Order.find(params[:order_id])
-    @order.recipe = Recipe.find(@order.recipe_id)
+    session[:cart] = nil
   end
 
 private
