@@ -1,5 +1,10 @@
+<% if session[:cart].empty? %>
+<p> panier vide</p>
+<% else %>
 <% session[:cart].each do |element|  %>
 <h1><%= element["name"] %></h1>
 <%= image_tag element["photo_url"] %>
 <% end %>
 <%= link_to "commander", new_order_path  %>
+<% end %>
+
