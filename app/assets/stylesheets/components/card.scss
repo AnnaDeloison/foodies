@@ -80,7 +80,7 @@ border: none;
   height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: 10%;
+  border-radius: 20px;
 }
 
 .card-trip h2 {
@@ -112,3 +112,8 @@ border: none;
    color: #004445;
 }
 
+.card-trip-index {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
