@@ -27,3 +27,5 @@ TroubleRecipe.create(recipe_id: recipes1.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes2.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes3.id, trouble_id: trouble1.id)
 
+
+
