@@ -9,10 +9,10 @@
 }
 
 .menu-central {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a
@@ -23,8 +23,7 @@ a
 
 img {
   border-radius: 100%;
-  display: block;
-  align-items: end;
+  display: flex;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -43,5 +42,11 @@ img {
 
 .logo span {
   color: yellow;
+}
+
+.connexion {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
