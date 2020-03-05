@@ -15,19 +15,11 @@
            <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p>
         </div>
         <div id="bouton-et-texte-commander">
-          <%= link_to new_recipe_order_path(@recipe), id: "bouton-commander" do %>
+          <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
             <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
           <% end %>
           <h2 id="texte-commander"> COMMANDER </h2>
         </div>
-
-    <%= link_to "panier", show_cart_path  %>
-
-    <div id="bouton-et-texte-commander">
-      <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
-        <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
-      <% end %>
-      <h2 id="texte-commander"> COMMANDER </h2>
 
     </div>
 
