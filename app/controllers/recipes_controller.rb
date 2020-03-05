@@ -12,6 +12,7 @@ class RecipesController < ApplicationController
   def add_cart
     @recipe = Recipe.find(params[:id])
     session[:cart] << @recipe
+    redirect_to recipe_path(@recipe)
   end
 
   def show_cart
