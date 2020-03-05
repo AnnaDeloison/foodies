@@ -4,6 +4,7 @@
 <% session[:cart].each do |element|  %>
 <h1><%= element["name"] %></h1>
 <%= image_tag element["photo_url"] %>
+<%= link_to "Retirer cette recette du panier", delete_recipe_path(element) %>
 <% end %>
 <%= link_to "commander", new_order_path  %>
 <% end %>
