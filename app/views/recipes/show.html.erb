@@ -1,4 +1,5 @@
 <body id="body-of-recipes-page">
+
   <div class="global-index-id">
 
     <div class="container">
@@ -19,6 +20,17 @@
           <% end %>
           <h2 id="texte-commander"> COMMANDER </h2>
         </div>
+
+    <%= link_to "panier", show_cart_path  %>
+
+    <div id="bouton-et-texte-commander">
+      <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
+        <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
+      <% end %>
+      <h2 id="texte-commander"> COMMANDER </h2>
+
     </div>
+
   </div>
+
 </body>
