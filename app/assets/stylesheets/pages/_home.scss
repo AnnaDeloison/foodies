@@ -85,3 +85,20 @@
   border-radius: 50%;
   position: absolute;
 }
+
+#bouton-et-texte-commander-accueil {
+  display: flex;
+    align-items: center;
+  justify-content: center;
+  width: 295px;
+}
+
+#texte-commander-page-accueil {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+#paragraphe-accueil {
+  min-width: 450px;
+}
