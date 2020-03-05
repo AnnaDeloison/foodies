@@ -26,6 +26,15 @@ img {
   display: flex;
 }
 
+li {
+  list-style-type: none;
+
+}
+
+.menu-central a {
+  margin: 20px;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
@@ -34,7 +43,9 @@ img {
   width: 200px;
 }
 
-
+#image-navbar {
+  display: flex;
+}
 
 .logo {
   color: white
@@ -47,6 +58,8 @@ img {
 .connexion {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+
 }
+
+
 
