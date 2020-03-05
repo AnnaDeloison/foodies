@@ -17,12 +17,9 @@
 
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "chimio", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "coucouanana rentre vite une maladie", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "chimio", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "coucouanana rentre vite une maladie", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "chimio", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "coucouanana rentre vite une maladie", trouble_path(1), class: "dropdown-item" %>
+              <%= link_to "Chimiothérapie", trouble_path(1), class: "dropdown-item" %>
+              <%= link_to "Digestion", trouble_path(2), class: "dropdown-item" %>
+              <%= link_to "Déglutition", trouble_path(3), class: "dropdown-item" %>
             </div>
           </li>
         </ul>
@@ -47,6 +44,11 @@
         <% end %>
       </div>
 
+      <div class="panier">
+        <li class="nav-item">
+        <p> <%= link_to "panier", show_cart_path %> </p>
+        </li>
+      </div>
   </div>
 
 
