@@ -4,13 +4,4 @@ class PagesController < ApplicationController
   def home
   end
 
-  def chimiotherapie
-  end
-
-  def digestion
-  end
-
-  def deglutition
-  end
-
 end
