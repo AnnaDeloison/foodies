@@ -8,13 +8,11 @@
   display: block;
   position: absolute;
   top: 0;
-  z-index: 0;
+  z-index: -1;
   margin-bottom: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-
-
 
 .filtre-et-recettes {
   display: flex;
@@ -24,13 +22,17 @@
 }
 
 .filtres {
-  z-index: 100;
-  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
-  height: 100%;
-  border-radius: 10%;
-  padding-bottom: 50px;
-  padding-top: 20px;
-  color: #004445;
+    z-index: 100;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+    height: 300px;
+    padding: 20px 100px;
+    border-radius: 10%;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    color: #004445;
+    border-radius: 20px;
+    margin-top: 100px;
+    padding-right: 150px;
 }
 
 .filtres h3 {
@@ -46,11 +48,14 @@
   font-size: 10px;
 }
 
-
 .searchbar {
   display: flex;
-  justify-content: space-around;
   z-index: 100;
+  justify-content: center;
+  width: 1100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: -20px;
 }
 
 .champ {
@@ -69,14 +74,17 @@ margin-left: 8px;
 }
 
 .champ {
-color: #F8B400;
-border: none;
-font-weight: 500;
-font-size: 15px;
-  width: 844px;
-  height: 56px;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
-  border-radius: 20px;
+    outline: none;
+    color: #F8B400;
+    border: none;
+    font-weight: 500;
+    font-size: 17px;
+    width: 844px;
+    height: 50px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 0px 20px;
+
 }
 
 
@@ -88,32 +96,71 @@ body {
   background-color: white;
 }
 
-#nom-et-prix {
-  max-width: 200px;
+.nom-et-prix {
+    max-width: 200px;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-#para-prix {
-  font-size: 15px;
-  margin-top: 15px;
+.para-prix {
+    font-size: 15px;
+    margin-top: none;
+    -webkit-box-align: end;
+    margin-right: -68px;
+    margin-left: 20px;
+    align-items: flex-end;
 }
 
 #cardindex {
   padding-bottom:15px;
+  width: 270px;
 }
 
-#bouton-et-prix {
-  display: flex;
-  flex-direction: column;
-}
-
-#recipe-name {
+.recipe-name {
   font-size: 18px;
   color: #004445;
 }
 
 .container-index {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 1800px;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 50px;
+  }
+
+#image-index {
+  height: 200px;
+  width: 270px;
+  border-radius: 25px;
+}
+
+.nom-plats {
+  font-size: 18px;
+}
+
+.nos-bocaux {
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+#navbar-and-cards {
   display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+
+#filtrer-par {
+  margin-left: -80px;
+  width: 80px;
 }

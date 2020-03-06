@@ -5,21 +5,14 @@
     <br>
     <br>
 
-    <div class="searchbar ">
-      <h2 class="searchbar">Nos Bocaux</h2>
+    <div class="nos-bocaux">
+      <h2 class="nos-bocaux">Nos Bocaux</h2>
     </div>
 
     <br>
     <br>
     <br>
 </div>
-
-
-    <div class="searchbar">
-        <form action="" class="searchbar" id="search-bar">
-            <input class="champ" type="text" placeholder="Rechercher une recette"/>
-        </form>
-    </div>
 
     <br>
     <br>
@@ -29,35 +22,40 @@
     <div class="filtre-et-recettes">
 
           <div class="filtres item col-sm-2">
-            <h3>Filtrer par</h3>
-            <h4>Troubles</h4>
-            <p>Chimio</p>
+            <h3 id="filtrer-par">Filtrer par</h3>
+            <h4 id="filtrer-par">Troubles</h4>
+            <p id="filtrer-par">Chimio</p>
           </div>
 
+<div class="navbar-and-cards">
 
-          <div class="cards item col-sm-10">
+      <div class="searchbar">
+        <form action="" class="searchbar" id="search-bar">
+            <input class="champ" type="text" placeholder="Rechercher une recette"/>
+        </form>
+    </div>
 
+          <div class="cards-recipes item col-sm-10">
             <% @recipes.each do |recipe| %>
-              <div class="card-trip" id="cardindex">
-                <%= image_tag recipe.photo_url %>
-                  <div class="card-trip-index">
-                    <div id="nom-et-prix">
-                      <h2 id="recipe-name"><%=recipe.name.capitalize%></h2>
-                    </div>
-                    <div id="bouton-et-prix">
-                    <div>
-                      <%= link_to recipe_path(recipe), id: "bouton-commander-index" do %>
-                      <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander-index" %>
-                    <% end %>
-                    <p id="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
-                    </div>
-                    </div>
-                  </div>
+              <div class="card-index" id="cardindex">
+
+                  <%= link_to recipe_path(recipe)do %>
+                  <%= image_tag recipe.photo_url, id: "image-index"  %>
+                  <% end %>
+
+
+
+                      <div class="nom-et-prix">
+                          <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
+                          <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
+                      </div>
+
+
+
               </div>
             <% end %>
-
           </div>
-
+</div>
     </div>
 
 </div>
