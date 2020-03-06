@@ -29,11 +29,53 @@
 
     <div class="connexion">
 
-<!--       <div class="panier"> -->
+        <li class="nav-item dropdown">
+            <a class="dropdown-toggle nav-item" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Panier</a>
+
+            <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
+             <ul>
+                <% session[:cart].each do |element|  %>
+
+                 <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $  </p>
+
+                <% end %>
+
+                <% @cart = 0 %>
+                 <% session[:cart].each do |element| %>
+                 <% @cart += element["price_cents"] %>
+                 <% end %>
+                <%= @cart %>
+              <li> <%= link_to "Valider et commander", new_order_path, class: "btn btn primary" %> </li>
+            </ul>
+          </div>
+        </li>
+
+
+
+
+
+<!--
         <li class="nav-item">
          <%= link_to "panier", show_cart_path, class: "nav-link"%>
+        <div class="dropdown-menu dropdown-menu-left" id="panier" aria-labelledby="navbarDropdown">
+             <ul>
+                <% session[:cart].each do |element|  %>
+
+                 <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $  </p>
+
+                <% end %>
+
+                <% @cart = 0 %>
+                 <% session[:cart].each do |element| %>
+                 <% @cart += element["price_cents"] %>
+                 <% end %>
+                <%= @cart %>
+              <li> <%= link_to "Valider et commander", new_order_path, class: "btn btn primary" %> </li>
+            </ul>
+          </div>
         </li>
-<!--       </div> -->
+ -->
+
       <% if user_signed_in? %>
 
         <li class="nav-item dropdown">
@@ -62,4 +104,5 @@
           </li>
         <% end %>
       </div>
+    </div>
   </div>
