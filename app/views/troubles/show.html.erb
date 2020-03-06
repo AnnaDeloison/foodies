@@ -1,7 +1,7 @@
 <div class="global-troubles"></div>
 <div class="container">
 <div class="background-color">
-<h1 class="title-trouble"><%= @trouble.name%></h1>
+<h1 class="title-trouble"><%= @trouble.name %></h1>
 </div>
 </div>
 
@@ -42,16 +42,24 @@
   <div class="cards">
 
 
-  <% @trouble.recipes.each do |recipe| %>
-    <div class="card-trip">
-      <%= image_tag recipe.photo_url %>
-        <div class="card-trip-infos">
-          <h2><%=recipe.name.capitalize%></h2>
-          <p>Price: <%= humanized_money_with_symbol(recipe.price) %></p>
-          <%= link_to "Commander", recipe_path(recipe), class: "link" %>
-        </div>
-    </div>
-  <% end %>
+ <% @trouble.recipes.each do |recipe| %>
+              <div class="card-trip" id="cardindex">
+                <%= image_tag recipe.photo_url %>
+                  <div class="card-trip-index">
+                    <div id="nom-et-prix">
+                      <h2 id="recipe-name"><%=recipe.name.capitalize%></h2>
+                    </div>
+                    <div id="bouton-et-prix">
+                    <div>
+                      <%= link_to recipe_path(recipe), id: "bouton-commander-index" do %>
+                      <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander-index" %>
+                    <% end %>
+                    <p id="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
+                    </div>
+                    </div>
+                  </div>
+              </div>
+            <% end %>
   </div>
 
 </div>

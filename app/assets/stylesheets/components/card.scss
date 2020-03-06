@@ -66,6 +66,7 @@ border: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
+  width: 1000px;
   border-radius: 10px;
 
 }
@@ -73,7 +74,7 @@ border: none;
 .card-trip {
   overflow: hidden;
   background: white;
-  border-radius: 10%;
+  border-radius: 0px;
 }
 
 .card-trip > img {
@@ -115,5 +116,22 @@ border: none;
 .card-trip-index {
   padding: 16px;
   display: flex;
+  margin-top: -20px;
   justify-content: space-between;
+}
+
+.card-index h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #004445;
+}
+
+.cards-recipes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  // width: 1000px;
+  border-radius: 10px;
+  // margin-left: 50px;
 }
