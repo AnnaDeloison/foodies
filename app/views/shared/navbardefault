@@ -55,3 +55,25 @@
 
 
 </div>
+nav bar photo
+<!--
+        <li class="nav-item">
+         <%= link_to "panier", show_cart_path, class: "nav-link"%>
+        <div class="dropdown-menu dropdown-menu-left" id="panier" aria-labelledby="navbarDropdown">
+             <ul>
+                <% session[:cart].each do |element|  %>
+
+                 <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $  </p>
+
+                <% end %>
+
+                <% @cart = 0 %>
+                 <% session[:cart].each do |element| %>
+                 <% @cart += element["price_cents"] %>
+                 <% end %>
+                <%= @cart %>
+              <li> <%= link_to "Valider et commander", new_order_path, class: "btn btn primary" %> </li>
+            </ul>
+          </div>
+        </li>
+ -->
