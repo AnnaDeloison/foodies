@@ -1,46 +1,57 @@
-<h1><%= @user.first_name %> <%= @user.last_name  %> </h1>
-<h2> Commandes futures </h2>
-<div class="cards item col-sm-10">
-<% @user.orders.each do |element| %>
-  <% if element["order_date"] > Time.now %>
-  <div class="card-trip" id="cardindex">
-    <%= image_tag Item.find(element.id).recipe.photo_url %>
-      <div class="card-trip-index">
-        <div id="nom-et-prix">
-          <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
-        </div>
-        <div id="bouton-et-prix">
-        <div>
-          <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
-        </div>
-        </div>
-      </div>
+<div class="container">
 
-  <% end %>
-  <% end %>
-
-  </div>
-  </div>
+  <h1><%= @user.first_name %> <%= @user.last_name  %> </h1>
   <br>
-  <br>
-  <h2> Commandes passées </h2>
+  <h2> Commandes futures </h2>
   <div class="cards item col-sm-10">
-  <% @user.orders.each do |element| %>
-    <% if element["order_date"] < Time.now %>
-  <div class="card-trip" id="cardindex">
-    <%= image_tag Item.find(element.id).recipe.photo_url %>
-      <div class="card-trip-index">
-        <div id="nom-et-prix">
-          <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
-        </div>
-        <div id="bouton-et-prix">
-        <div>
-          <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
-        </div>
-        </div>
+    <% @user.orders.each do |element| %>
+      <% if element["order_date"] > Time.now %>
+      <div class="card-trip" id="cardindex">
+        <%= image_tag Item.find(element.id).recipe.photo_url %>
+        <br>
+          <div class="card-trip-index">
+            <div id="nom-et-prix">
+              <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
+            </div>
+            <div id="bouton-et-prix">
+            <div>
+              <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
+            </div>
+            </div>
+          </div>
+
+      <% end %>
+      <% end %>
       </div>
+
+
+    <br>
+    <br>
+
+
+
+    <h2> Commandes passées </h2>
+    <br>
+    <div class="cards item col-sm-10">
+    <% @user.orders.each do |element| %>
+      <% if element["order_date"] < Time.now %>
+    <div class="card-trip" id="cardindex">
+      <%= image_tag Item.find(element.id).recipe.photo_url %>
+      <br>
+        <div class="card-trip-index">
+          <div id="nom-et-prix">
+            <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
+          </div>
+          <div id="bouton-et-prix">
+          <div>
+            <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
+          </div>
+          </div>
+        </div>
+    </div>
+  <% end %>
+  <% end %>
   </div>
-<% end %>
-<% end %>
-</div>
+  </div>
+
 </div>
