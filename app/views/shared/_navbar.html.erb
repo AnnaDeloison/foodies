@@ -34,7 +34,7 @@
 
             <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
              <li>
-                <% if session[:cart].empty? %>
+                <% if session[:cart].blank? %>
                 <p>panier vide</p>
                 <% else %>
                 <% session[:cart].each do |element|  %>
