@@ -35,9 +35,8 @@
             <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
              <ul>
                 <% session[:cart].each do |element|  %>
-
-                 <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $  </p>
-
+                  <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $  </p>
+                  <%= link_to "Retirer cette recette du panier", delete_recipe_path(element) %>
                 <% end %>
 
                 <% @cart = 0 %>
