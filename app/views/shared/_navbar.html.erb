@@ -29,29 +29,33 @@
 
     <div class="connexion">
 
-        <li class="nav-item dropdown">
+        <ul class="nav-item dropdown">
             <a class="dropdown-toggle nav-item" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Panier</a>
 
             <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
-             <ul>
+             <li>
                 <% if session[:cart].empty? %>
                 <p>panier vide</p>
                 <% else %>
                 <% session[:cart].each do |element|  %>
-                  <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $  </p>
-                  <%= link_to "Retirer cette recette du panier", delete_recipe_path(element) %>
+                  <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $
+                  <%= link_to "supprimer", delete_recipe_path(element) %> </p>
                 <% end %>
+              </li>
+             <hr>
 
                 <% @cart = 0 %>
                  <% session[:cart].each do |element| %>
                  <% @cart += element["price_cents"] %>
                  <% end %>
-                <%= @cart %>
-              <li> <%= link_to "Valider et commander", new_order_path, class: "btn btn primary" %> </li>
+               <p> Total= <%= @cart %> $</p>
+
+              <%= link_to "Valider et commander", new_order_path, class: "btn btn primary" %>
+
               <% end %>
             </ul>
-          </div>
-        </li>
+
+
 
 
 
@@ -86,6 +90,7 @@
             <%= link_to "Login", new_user_session_path, class: "" %>
           </li>
         <% end %>
+         </div>
       </div>
     </div>
   </div>
