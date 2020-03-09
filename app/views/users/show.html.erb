@@ -1,8 +1,8 @@
 <div class="container">
 
-  <h1><%= @user.first_name %> <%= @user.last_name  %> </h1>
+  <h1 class="color-text-center"> Bienvenue sur votre profil <%= @user.first_name %> <%= @user.last_name  %> </h1>
   <br>
-  <h2> Commandes futures </h2>
+  <h2 class="color-text-center"> Commandes futures </h2>
   <div class="cards item col-sm-10">
     <% @user.orders.each do |element| %>
       <% if element["order_date"] > Time.now %>
@@ -30,7 +30,7 @@
 
 
 
-    <h2> Commandes passées </h2>
+    <h2 class="color-text-center"> Commandes passées </h2>
     <br>
     <div class="cards item col-sm-10">
     <% @user.orders.each do |element| %>
