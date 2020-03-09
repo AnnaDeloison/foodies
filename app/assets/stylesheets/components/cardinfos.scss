@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+  color: #004445;
 }
 
 .card-info {
@@ -47,6 +48,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
 
 #little-card-info  {
