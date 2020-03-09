@@ -110,12 +110,13 @@ body {
 }
 
 .para-prix {
-    font-size: 15px;
-    margin-top: none;
-    -webkit-box-align: end;
-    margin-right: -68px;
-    margin-left: 20px;
-    align-items: flex-end;
+  font-size: 15px;
+  margin-top: none;
+  -webkit-box-align: end;
+  margin-right: -68px;
+  margin-left: 20px;
+  align-items: right;
+  color: #004445;
 }
 
 #cardindex {
@@ -171,6 +172,4 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.para-prix {
-  color: #004445;
-}
+
