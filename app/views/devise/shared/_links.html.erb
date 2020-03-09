@@ -1,6 +1,9 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_session_path(resource_name) %><br />
-<% end %>
+<div id="se-connecter">
+  <%- if controller_name != 'sessions' %>
+    <%= link_to "Se connecter", new_session_path(resource_name), id: "se-connecter" %><br />
+  <% end %>
+</div>
+
 <div id="sinscrire">
   <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
     <%= link_to "", new_registration_path(resource_name), id: "bouton-sign-in" %><br />
@@ -14,6 +17,7 @@
     <h1 id="text-sign-in">Mot de passe oublié</h1>
   <% end %>
 </div>
+
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
   <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
 <% end %>
