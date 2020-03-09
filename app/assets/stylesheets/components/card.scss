@@ -66,15 +66,15 @@ border: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
-  width: 1000px;
   border-radius: 10px;
-
+  object-fit: cover;
 }
 
 .card-trip {
   overflow: hidden;
   background: white;
   border-radius: 0px;
+  width: 100%;
 }
 
 .card-trip > img {
@@ -131,7 +131,7 @@ border: none;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
-  // width: 1000px;
+  width: 100%;
   border-radius: 10px;
-  // margin-left: 50px;
 }
+

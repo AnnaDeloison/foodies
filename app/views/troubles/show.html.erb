@@ -36,30 +36,22 @@
   <br>
 
   <h1 class="titre">Commandez les plats qui vous conviennent</h1>
+
   <br>
   <br>
 
-  <div class="cards">
 
-
- <% @trouble.recipes.each do |recipe| %>
-              <div class="card-trip" id="cardindex">
-                <%= image_tag recipe.photo_url %>
-                  <div class="card-trip-index">
-                    <div id="nom-et-prix">
-                      <h2 id="recipe-name"><%=recipe.name.capitalize%></h2>
-                    </div>
-                    <div id="bouton-et-prix">
-                    <div>
-                      <%= link_to recipe_path(recipe), id: "bouton-commander-index" do %>
-                      <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander-index" %>
-                    <% end %>
-                    <p id="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
-                    </div>
-                    </div>
-                  </div>
-              </div>
-            <% end %>
-  </div>
-
+   <div class="cards-recipes item">
+    <% @trouble.recipes.each do |recipe| %>
+      <div class="card-index">
+        <%= link_to recipe_path(recipe)do %>
+          <%= image_tag recipe.photo_url, id: "image-index"  %>
+        <% end %>
+        <div class="nom-et-prix">
+          <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
+          <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
+        </div>
+      </div>
+    <% end %>
+   </div>
 </div>
