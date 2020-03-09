@@ -130,8 +130,16 @@ border: none;
 .cards-recipes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 50px;
+  grid-gap: 15px;
   width: 100%;
   border-radius: 10px;
 }
 
+
+.cards-recipes-trouble {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 80px;
+  width: 100%;
+  border-radius: 10px;
+}
