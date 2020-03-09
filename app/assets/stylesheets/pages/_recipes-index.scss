@@ -164,3 +164,8 @@ body {
   // margin-left: -80px;
   // width: 80px;
 }
+
+.recipe-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

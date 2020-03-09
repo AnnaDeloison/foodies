@@ -11,8 +11,13 @@
         <% end %>
         <%= image_tag @recipe.photo_url, id: "photo-dans-show", alt: "food" %>
         <h2 id="ingredients-header"> Ingrédients </h2>
-        <div class="container" id="description-of-the-recipe">
-           <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p>
+        <div class="recipe-description" >
+          <div class="container" id="description-of-the-recipe">
+             <p> <%= @recipe.description %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p>
+          </div>
+          <div class="container" id="description-of-the-recipe">
+             <p> <%= @recipe.apport %> </p> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quaerat nostrum minima ullam maxime natus soluta perferendis possimus sequi blanditiis sint voluptatem aliquam incidunt sit ea recusandae illum, impedit tempore. </p>
+          </div>
         </div>
         <div id="bouton-et-texte-commander">
           <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
