@@ -87,9 +87,22 @@
   display: inline-block;
   border-radius: 50%;
   box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
-  margin-right: auto;
+  margin-left: -15px;
+  margin-right: 10px;
+  // margin-bottom: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
 
+}
+
+#bouton-inscription {
+  color: white;
+  background-color: #F8B400;
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+  margin-right: 5px;
 }
