@@ -16,11 +16,11 @@ impact_digestion = "La digestion peut entrainer plusieurs problèmes comme des b
 conseils_digestion = "Pour les brûlures d'estomac, limitez les aliments qui favorisent les sensations de brûlures et les plats gras. Pour la diarrhée, buvez beaucoup d'eau et privilégiez les aliments faciles à digérer "
 
 impact_deglutition = "Les traitements peuvent avoir un impact sur les muqueuses et la production de salive. Les tumeurs O.R.L. peuvent provoquer des douleurs qui engendrent des difficultés de mastication et de déglutition. De même, la radiothérapie ciblée entre le cou et la tête peut entraîner une diminution de la production de salive. La réduction de salive augmente les difficultés à avaler les aliments. "
-conseils_déglutition = "Éviter d'utiliser des liquides pour avaler des aliments solides - Privilégier l'eau gazeuse à l’eau plate - Favoriser les aliments chauds ou glacés - Choisir des plats onctueux - Supprimer les aliments en grain ou friables - Éviter d'utiliser des liquides pour avaler des aliments solides."
+conseils_deglutition = "Éviter d'utiliser des liquides pour avaler des aliments solides - Privilégier l'eau gazeuse à l’eau plate - Favoriser les aliments chauds ou glacés - Choisir des plats onctueux - Supprimer les aliments en grain ou friables - Éviter d'utiliser des liquides pour avaler des aliments solides."
 
 trouble1 = Trouble.create!(name: "Chimiothérapie", impact: impact_chimio, conseils: conseils_chimio )
 trouble2 = Trouble.create!(name: "Digestion", impact: impact_digestion, conseils: conseils_digestion)
-trouble3 = Trouble.create!(name: "Déglution", impact: impact_deglution, conseils: conseils_deglutition)
+trouble3 = Trouble.create!(name: "Déglution", impact: impact_deglutition, conseils: conseils_deglutition)
 # test pour recipes dans index et show
 
 
