@@ -30,7 +30,7 @@
 
 #ingredients-header {
   text-align: center;
-  margin: 100px 40px 40px 40px;
+  margin: 40px 40px 40px 40px;
   font-weight: bold;
   font-size: 20px;
   color: #004445;
@@ -38,7 +38,8 @@
 }
 
 #bouton-et-texte-commander {
-  margin: 100px 80px 80px 80px;
+  position: relative;
+  margin: 0px 80px 80px 80px;
   z-index: 100;
 }
 
@@ -48,10 +49,11 @@
   margin-top: 20px;
   text-align: center;
   color: #004445;
-  z-index:100;
+  z-index: 100;
 }
 
 #photo-dans-show {
+  position: relative;
   max-width: 634px;
   max-height: 375px;
   border-radius: 10px;
@@ -59,7 +61,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: -50px;
-  z-index: 100;
+  z-index: 90;
 }
 
 #name-of-the-recipe h1 {
