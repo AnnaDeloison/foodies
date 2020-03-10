@@ -15,9 +15,9 @@
   align-items: center;
 }
 
-a
+.menu-central li
   {
-  color: white;
+  color: black;
   padding: 0px 5px;
 
 }
@@ -32,8 +32,9 @@ li {
 
 }
 
-.menu-central a {
+.menu-central li a  {
   margin: 20px;
+  color: black;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -79,6 +80,10 @@ margin-top: 0vh;
 
 .dropdown-menu {
   border-radius: 10px;
+}
+
+.transition {
+  transition-duration: 3s, 5s;
 }
 
 .dropdown-item:hover {
