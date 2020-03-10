@@ -2,11 +2,16 @@ class RecipesController < ApplicationController
    skip_before_action :authenticate_user!, only: :home, raise: false
 
    def index
-    @recipes = Recipe.all
+      if params[:name].present?
+        @recipes = Recipe.where("name ILIKE ?", "%#{params[:name]}%")
+      else
+        @recipes = Recipe.all
+      end
    end
 
   def show
     @recipe = Recipe.find(params[:id])
+
   end
 
   def add_cart
