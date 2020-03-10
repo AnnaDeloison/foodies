@@ -60,10 +60,12 @@
       <% if session[:cart].blank? %>
     <p>Panier vide</p>
     <% else %>
+    <% id = 0 %>
     <% session[:cart].each do |element|  %>
       <li class="clearfix">
-       <%= link_to recipes_url(element[:id]) do  %>
+       <%= link_to recipe_url(session[:cart][id]["id"]) do  %>
        <img  class="photo-cart" src= <%= element["photo_url"] %> alt="item1" />
+        <% id = id + 1 %>
         <% end %>
         <span class="item-name"> <%= element["name"] %> <%= element["price_cents"] %>€</span>
 <!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
