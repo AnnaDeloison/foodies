@@ -3,46 +3,45 @@
   <div class="global-index-id">
 
     <div class="container">
-        <div id="name-of-the-recipe">
-           <h1 id="font-size-of-recipe-name"> <%= @recipe.name %> </h1>
-        </div>
-        <%= link_to recipes_path, id: "bouton-retour" do %>
-          <%= image_tag "arrow.svg", alt: "alttext", id: "fleche-bouton-rtr" %>
-        <% end %>
-        <%= image_tag @recipe.photo_url, id: "photo-dans-show", alt: "food" %>
 
-      <div class= "container-ia">
 
-        <div class="recipe-item">
-          <div class="container" id="description-of-the-recipe">
-            <h2 id="ingredients-header"> La recette </h2>
-             <p> <%= @recipe.description %> </p>
+
+          <div id="name-of-the-recipe">
+             <h1 id="font-size-of-recipe-name"> <%= @recipe.name %> </h1>
           </div>
 
-        </div>
-
-        <div class="recipe-item">
-          <div class="container" id="description-of-the-recipe">
-             <h2 id="ingredients-header"> Les apports </h2>
-             <p> <%= @recipe.apport %> essai  </p>
-          </div>
-        </div>
-
-      </div>
-
-
-
-
-        <div id="bouton-et-texte-commander">
-          <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
-            <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
+          <%= link_to recipes_path, id: "bouton-retour" do %>
+            <%= image_tag "arrow.svg", alt: "alttext", id: "fleche-bouton-rtr" %>
           <% end %>
-          <h2 id="texte-commander"> COMMANDER </h2>
-        </div>
-      </div>
+          <%= image_tag @recipe.photo_url, id: "photo-dans-show", alt: "food" %>
 
 
+          <div class= "container-ia">
 
+                <div class="recipe-item">
+                  <div class="container" id="description-of-the-recipe">
+                    <h2 id="ingredients-header"> La recette </h2>
+                    <p> <%= @recipe.description %> </p>
+                  </div>
+                </div>
+
+                <div class="recipe-item">
+                  <div class="container" id="description-of-the-recipe">
+                     <h2 id="ingredients-header"> Les apports </h2>
+                     <p> <%= @recipe.apport %> essai  </p>
+                  </div>
+                </div>
+
+          </div>
+          <div id="bouton-et-texte-commander">
+            <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
+              <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
+            <% end %>
+            <h2 id="texte-commander"> COMMANDER </h2>
+          </div>
+
+
+    </div>
 
   </div>
 
