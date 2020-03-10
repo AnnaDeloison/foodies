@@ -2,6 +2,7 @@
   border: 2px solid #004445;
   width: 412px;
   height: 35px;
+
 }
 
 #form-page-commander {
@@ -33,4 +34,8 @@
   width: 100%;
   margin-left: -20px;
   space-between: none;
+}
+
+input.form-control::placeholder, select.form-control::placeholder {
+  opacity: 0.5;
 }
