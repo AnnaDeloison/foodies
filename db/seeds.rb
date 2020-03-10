@@ -31,10 +31,10 @@ description_saumon = "Le saumon aux asperges de ma grand mère"
 apport_saumon = "Le saumon diminue le risque de maladies cardiovasculaires et de mortalité par maladie coronarienne. Le saumon possède des vitamines D qui est associée à la santé osseuse, à la prévention de certains types de cancer dont le cancer colorectal et celui du sein."
 recipes2 = Recipe.create(sku: 'Saumon aux asperges', name: "Saumon aux asperges", description: description_saumon , apport: apport_saumon, price: 15.50, photo_url: "https://storenotrefamilleprod.blob.core.windows.net/images/cms/recette/33518/33518_large.jpg")
 
-recipes3 = Recipe.create(sku: 'Poulet au brocolis', name: "Poulet aux brocolis", description: description_poulet, apport: apport_poulet, price: 12, photo_url: "https://assets.kraftfoods.com/recipe_images/181573-181574.jpg")
 description_poulet = "Le poulet au brocolis, tout simplement délicieux !"
 apport_poulet = "Le poulet possède des vitamines B3, B5, B6 et B12. Il possède des minéraux tels que le zinc, qui permet la prévention de maladies cardiovasculaires et de certains cancers.
 La consommation de chou-fleur pourrait prévenir certains cancers, tels que ceux du poumon, des ovaires et des reins."
+recipes3 = Recipe.create(sku: 'Poulet au brocolis', name: "Poulet aux brocolis", description: description_poulet, apport: apport_poulet, price: 12, photo_url: "https://assets.kraftfoods.com/recipe_images/181573-181574.jpg")
 
 description_cabillaud = "Un cabillaud fondant, de délicats pétales de chorizo et du chou-fleur rôti. Une recette saine et délicieuse."
 apport_cabillaud = "Le cabillaud possède plusieurs acides gras qui agissent comme précurseurs de messagers chimiques favorisant un bon fonctionnement des systèmes immunitaire, circulatoire et hormonal."
