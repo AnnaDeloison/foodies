@@ -1,0 +1,11 @@
+function refreshForm(innerHTML) {
+  const newReviewForm = document.getElementById('.champ');
+  newReviewForm.innerHTML = innerHTML;
+}
+
+<% if @recipe.errors.any? %>
+  refreshForm('<%= j render "recipes/index", recipe: @recipe %>');
+<% else %>
+  addReview('<%= j render "reviews/show", review: @review %>');
+  refreshForm('<%= j render "reviews/form", restaurant: @restaurant, review: Review.new %>');
+<% end %>
