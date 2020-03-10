@@ -23,12 +23,14 @@
 .navbar img {
   border-radius: 100%;
   display: flex;
-  padding-bottom: 2vh;
 }
 
 li {
   list-style-type: none;
 
+}
+#panier-supprimer {
+  color: black;
 }
 
 .menu-central a {
@@ -196,7 +198,7 @@ nav {
 
     img {
       float: left;
-      margin-right: 12px;
+
     }
 
     .item-name {
@@ -264,6 +266,7 @@ nav {
   margin-top: 2vh;
   height: 40px;
   width: 40px;
-  border-radius: 100%
+  border-radius: 100%;
+  margin-right: 2vh;
 }
 
