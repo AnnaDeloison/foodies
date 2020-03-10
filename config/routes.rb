@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users
   resources :troubles, only: [:show]
-  resources :recipes, only: [:index, :show]
+  resources :recipes, only: [:index, :show] do
+    collection do
+      get :cards
+    end
+  end
   resources :orders, only: [:show, :new, :create] do
       resources :payments, only: :new
   end

@@ -5,6 +5,11 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
    end
 
+   def cards
+    @recipes = Recipe.joins(:troubles).where('troubles.name = ?', params[:maladie])
+    render partial: "cards", locals: { recipes: @recipes }
+   end
+
   def show
     @recipe = Recipe.find(params[:id])
   end
