@@ -18,9 +18,9 @@
 
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Chimiothérapie", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "Digestion", trouble_path(2), class: "dropdown-item" %>
-              <%= link_to "Déglutition", trouble_path(3), class: "dropdown-item" %>
+              <%= link_to "Chimiothérapie", trouble_path(Trouble.where("name ILIKE ?", "Chimiothérapie")[0].id), class: "dropdown-item" %>
+              <%= link_to "Digestion", trouble_path(Trouble.where("name ILIKE ?", "Digestion")[0].id), class: "dropdown-item" %>
+              <%= link_to "Déglutition", trouble_path(Trouble.where("name ILIKE ?", "Déglutition")[0].id), class: "dropdown-item" %>
             </div>
           </li>
         </ul>
