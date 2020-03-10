@@ -80,8 +80,6 @@ TroubleRecipe.create(recipe_id: recipes6.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes7.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes8.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes9.id, trouble_id: trouble1.id)
-TroubleRecipe.create(recipe_id: recipes10.id, trouble_id: trouble1.id)
-TroubleRecipe.create(recipe_id: recipes11.id, trouble_id: trouble1.id)
 
 TroubleRecipe.create(recipe_id: recipes2.id, trouble_id: trouble2.id)
 TroubleRecipe.create(recipe_id: recipes3.id, trouble_id: trouble2.id)
