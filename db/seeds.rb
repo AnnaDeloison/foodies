@@ -13,7 +13,7 @@ impact_chimio = "L’alimentation d’une personne traitée pour un cancer peut 
 conseils_chimio = "Masquer le goût de la viande - Adoucir les légumes - Consommer des laitages - Limiter la viande rouge au profit d’autres sources protéiniques - Éviter le sel - Préférer les aliments forts en goût - Rehausser les saveurs en utilisant les herbes aromatiques, les épices et autres aromates - Utiliser les épices et les condiments - Privilégier les aliments froids - Éviter de mélanger les aliments - Consommer des chewing-gums ou des bonbons mentholés - Se rincer régulièrement la bouche"
 
 impact_digestion = "La digestion peut entrainer plusieurs problèmes comme des brûlures d'estomac (sensation de brûlure qui peut irradier du ventre à la gorge), la diarrhée (irritation ou inflammation de la muqueuse intestinale qui se caractérise par de fréquentes selles liquide) ou des ballonnements (accumulation de gaz dans les intestins). Cela peut venir du stress, de l'aérophagie, des colites, d'intolérances alimentaires...  "
-conseils_digestion = "Pour les brûlures d'estomac, limitez les aliments qui favorisent les sensations de brûlures et les plats gras. Pour la diarrhée, buvez beaucoup d'eau et privilégiez les aliments faciles à digérer "
+conseils_digestion = "Pour les brûlures d'estomac, limitez les aliments qui favorisent les sensations de brûlures et les plats gras. Pour la diarrhée, buvez beaucoup d'eau et privilégiez les aliments faciles à digérer (soupes, riz, pâtes bien cuites...). Pour les ballonnements, mangez lentement en mâchant bien et sans avaler d’air, limitez boissons gazeuses et chewing-gums et réduisez l’absorption d’aliments flatulents  "
 
 impact_deglutition = "Les traitements peuvent avoir un impact sur les muqueuses et la production de salive. Les tumeurs O.R.L. peuvent provoquer des douleurs qui engendrent des difficultés de mastication et de déglutition. De même, la radiothérapie ciblée entre le cou et la tête peut entraîner une diminution de la production de salive. La réduction de salive augmente les difficultés à avaler les aliments. "
 conseils_deglutition = "Éviter d'utiliser des liquides pour avaler des aliments solides - Privilégier l'eau gazeuse à l’eau plate - Favoriser les aliments chauds ou glacés - Choisir des plats onctueux - Supprimer les aliments en grain ou friables - Éviter d'utiliser des liquides pour avaler des aliments solides."
@@ -34,7 +34,7 @@ recipes2 = Recipe.create(sku: 'Saumon aux asperges', name: "Saumon aux asperges"
 description_poulet = "Le poulet au brocolis, tout simplement délicieux !"
 apport_poulet = "Le poulet possède des vitamines B3, B5, B6 et B12. Il possède des minéraux tels que le zinc, qui permet la prévention de maladies cardiovasculaires et de certains cancers.
 La consommation de chou-fleur pourrait prévenir certains cancers, tels que ceux du poumon, des ovaires et des reins."
-recipes3 = Recipe.create(sku: 'Poulet au brocolis', name: "Poulet aux brocolis", description: description_poulet, apport: apport_poulet, price: 12, photo_url: "https://assets.kraftfoods.com/recipe_images/181573-181574.jpg")
+recipes3 = Recipe.create(sku: 'Poulet au brocolis', name: "Poulet aux brocolis", description: description_poulet, apport: apport_poulet, price: 12.00, photo_url: "https://assets.kraftfoods.com/recipe_images/181573-181574.jpg")
 
 description_cabillaud = "Un cabillaud fondant, de délicats pétales de chorizo et du chou-fleur rôti. Une recette saine et délicieuse."
 apport_cabillaud = "Le cabillaud possède plusieurs acides gras qui agissent comme précurseurs de messagers chimiques favorisant un bon fonctionnement des systèmes immunitaire, circulatoire et hormonal."
@@ -42,23 +42,37 @@ recipes4 = Recipe.create(sku: 'Dos de cabillaud - chou fleur', name: "Dos de cab
 
 description_crevettes = "De délicieuses crevettes au curry, accompagnées de riz"
 apport_crevettes = "La cardamome que l'on retrouve dans la plupart des curry va permettre de diminuer les spasmes de l'estomac et ainsi limiter les nausées et vomissements. Le magnésium présent en quantité notable dans le curry va permettre d'aider au fonctionnement des muscles, des nerfs mais aussi des intestins"
-recipes5 = Recipe.create(sku: 'Crevettes au curry', name: "Crevettes au curry", description: description_crevettes, apport: apport_crevettes , price: 13.5, photo_url: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/239755.jpg")
+recipes5 = Recipe.create(sku: 'Crevettes au curry', name: "Crevettes au curry", description: description_crevettes, apport: apport_crevettes , price: 13.50, photo_url: "https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/vimdb/239755.jpg")
 
 description_crousti = "Bâtonnets croustillants de poulet et sauce aux épices douces. Une recette qui permet de manger de la viande de façon ludique et détournée : le poulet est dissimulé sous la panure et son goût masqué par les épices douces."
 apport_crousti = "Les épices viennent enrober le goût du poulet et masquer celui-ci. Elles permettent de conserver le plus longtemps possible une alimentation riche en protéines animales, nécessaires pour conserver une alimentation équilibrée. Les corn-flakes enrobent le poulet et permettent de dissimuler la viande."
-recipes6 = Recipe.create(sku: "Bâtonnets croustillants de poulet", name: "Bâtonnets croustillants de poulet", description: description_crousti, apport: apport_crousti, price: 11.5, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Poulet.jpg")
+recipes6 = Recipe.create(sku: "Bâtonnets croustillants de poulet", name: "Bâtonnets croustillants de poulet", description: description_crousti, apport: apport_crousti, price: 11.50, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Poulet.jpg")
 
 description_patate = "Gnocchis de pomme de terre et sa garniture de courge. La courge peut être remplacée par un potiron, un potimarron ou toute autre cucurbitacée. Ajoutez des herbes mixées pour parfumer vos gnocchis."
 apport_patate = "Ce légume considéré comme un féculent possède des propriétés anti-diarrhéiques favorables pour le transit et se révèle particulièrement intéressant dans le cadre d’une préparation alimentaire. Ce féculent peut densifier l’alimentation et apporter un effet nutritif permettant de favoriser une alimentation « utile »."
-recipes7 = Recipe.create(sku: "Gnocchis de pomme de terre", name: "Gnocchis de pomme de terre", description: description_patate, apport: apport_patate, price: 14.5, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Gnocchi.jpg")
+recipes7 = Recipe.create(sku: "Gnocchis de pomme de terre", name: "Gnocchis de pomme de terre", description: description_patate, apport: apport_patate, price: 14.50, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Gnocchi.jpg")
 
 description_taboule = "Le taboulé se prépare à l’avance et se consomme froid à la demande, lorsque la faim se présente. Il ne nécessite pas de cuisson et ne dégage pas d’odeur. Vous pouvez jouer sur les herbes en rajoutant de la menthe ou du cerfeuil par exemple."
 apport_taboule = "Persil, coriandre, menthe… Ces herbes et plantes aromatiques apportent une fraîcheur particulièrement apaisante dans le cadre de nausées et vomissements. De plus, ces produits froids sans cuisson répondent à une alimentation fraîche et modifiable selon ses goûts et envies. Vous pourrez manger votre taboulé dès que vous en aurez envie, ne pas le cuisiner ne vous fera pas passer l'appétit."
-recipes8 = Recipe.create(sku: "Taboulé libanais", name: "Taboulé libanais", description: description_taboule, apport: apport_taboule, price: 8, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Taboule-630x380.jpg")
+recipes8 = Recipe.create(sku: "Taboulé libanais", name: "Taboulé libanais", description: description_taboule, apport: apport_taboule, price: 8.00, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Taboule-630x380.jpg")
 
 description_mozza = "Cake saumon mozzarella, au zeste de citron et à la poudre d'amandes."
 apport_mozza = "Les amandes sont riches en acides gras, protéines végétales, vitamines, minéraux. Elles ajoutent du goût à la préparation et augmentent sa valeur calorique. Elles peuvent être remplacées par de la poudre de noisette afin de varier le goût. Elles peuvent être utilisées plus ou moins broyées et en plus ou moins grande quantité, de façon à modifier l’intensité du goût et la valeur calorique du plat."
-recipes9 = Recipe.create(sku: "Cake saumon mozzarella", name: "Cake saumon mozzarella", description: description_mozza, apport: apport_mozza, price: 7.5, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/06/Cake.jpg")
+recipes9 = Recipe.create(sku: "Cake saumon mozzarella", name: "Cake saumon mozzarella", description: description_mozza, apport: apport_mozza, price: 7.50, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/06/Cake.jpg")
+
+description_arti = "Crème d'artichauts au gorgonzola, poudre de cèpes et condiment à l'échalote. "
+apport_arti = "L'artichaut est un aliment riche en protéines et en fibres qui s'incorpore facilement dans une préparation liquide facile à déguster. Il donne de la densité à la préparation tout en limitant la mastication et facilitant la déglutition. En cas de difficulté de déglutition, consommez cette recette glacée en ajoutant un peu de sel. En cas d’aphtes, vous pouvez apaiser la préparation en supprimant le sel et le poivre."
+recipes10 = Recipe.create(sku: "Crème d'artichauts", name: "Crème d'artichauts", description: description_arti, apport: apport_arti, price: 7.50, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/CremeArtichaut.jpg")
+
+
+description_tartare = "Tartare de cabillaud frais avec du kiwi, de l'ananas, des tomates et de la coriandre. Vous pouvez l'accompagner d'un thé vert glacé en été, pour vous désaltérer"
+apport_tartare = "Ananas, kiwis, tomates, citron vert, coriandre… Ces aliments riches en eau et en fibres apportent une texture peu dense grâce à leur forte concentration en eau qui facilite le transit intestinal. De plus, leurs qualités nutritives riches en vitamines permettent de répondre aux besoins journaliers de l’organisme."
+recipes11 = Recipe.create(sku: "Tartare de cabillaud exotique", name: "Tartare de cabillaud exotique", description: description_tartare, apport: apport_tartare, price: 13.80, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Tartare.jpg")
+
+description_avocat = "Smoothie onctueux en version salée grâce au bouillon de volaille qui lui apporte une saveur parfaite"
+apport_avocat = "La texture de l’avocat lui permet d’être transformé de solide en liquide tout en conservant sa saveur et ses propriétés nutritives. Grâce à l’avocat, la préparation est onctueuse, ce qui permet d’intégrer dans l’alimentation cet aliment riche en fibres et en vitamines sans mastication."
+recipes12 = Recipe.create (sku: "Smoothie à l'avocat", name: "Smoothie à l'avocat", description: description_avocat, apport: apport_avocat, price: 11.80, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Smoothie.jpg")
+
 
 
 
@@ -66,11 +80,16 @@ TroubleRecipe.create(recipe_id: recipes6.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes7.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes8.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes9.id, trouble_id: trouble1.id)
+TroubleRecipe.create(recipe_id: recipes10.id, trouble_id: trouble1.id)
+TroubleRecipe.create(recipe_id: recipes11.id, trouble_id: trouble1.id)
 
 TroubleRecipe.create(recipe_id: recipes2.id, trouble_id: trouble2.id)
 TroubleRecipe.create(recipe_id: recipes3.id, trouble_id: trouble2.id)
 TroubleRecipe.create(recipe_id: recipes4.id, trouble_id: trouble2.id)
+TroubleRecipe.create(recipe_id: recipes11.id, trouble_id: trouble2.id)
 
 TroubleRecipe.create(recipe_id: recipes1.id, trouble_id: trouble3.id)
-TroubleRecipe.create(recipe_id: recipes5.id, trouble_id: trouble2.id)
+TroubleRecipe.create(recipe_id: recipes5.id, trouble_id: trouble3.id)
+TroubleRecipe.create(recipe_id: recipes10.id, trouble_id: trouble3.id)
+TroubleRecipe.create(recipe_id: recipes12.id, trouble_id: trouble3.id)
 
