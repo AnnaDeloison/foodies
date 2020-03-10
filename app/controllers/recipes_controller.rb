@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
 
    def cards
     @recipes = Recipe.joins(:troubles).where('troubles.name = ?', params[:maladie])
+    p @recipes.length
     render partial: "cards", locals: { recipes: @recipes }
    end
 

@@ -20,7 +20,7 @@ conseils_deglutition = "Éviter d'utiliser des liquides pour avaler des aliments
 
 trouble1 = Trouble.create!(name: "Chimiothérapie", impact: impact_chimio, conseils: conseils_chimio )
 trouble2 = Trouble.create!(name: "Digestion", impact: impact_digestion, conseils: conseils_digestion)
-trouble3 = Trouble.create!(name: "Déglution", impact: impact_deglutition, conseils: conseils_deglutition)
+trouble3 = Trouble.create!(name: "Déglutition", impact: impact_deglutition, conseils: conseils_deglutition)
 # test pour recipes dans index et show
 
 description_soupe = "Une savoureuse soupe à la patate douce, qui vous apportera douceur et chaleur. "
