@@ -140,7 +140,9 @@ border: none;
 .cards-recipes-trouble {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px;
-  width: 100%;
+  grid-gap: 15px;
+  width: 1000px;
   border-radius: 10px;
+  margin: auto;
+  margin-left: 75px;
 }
