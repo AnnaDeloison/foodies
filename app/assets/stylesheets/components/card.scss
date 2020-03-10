@@ -108,6 +108,14 @@ border: none;
   position: relative;
 }
 
+input[type="radio"] {
+  display: none;
+}
+
+input[type=radio]:checked+label {
+  font-weight: bold;
+}
+
 .link {
   text-decoration: none;
    color: #004445;
