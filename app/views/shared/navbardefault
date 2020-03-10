@@ -76,4 +76,31 @@ nav bar photo
             </ul>
           </div>
         </li>
+
  -->
+
+
+
+
+navbar panier
+              <li>
+                <% if session[:cart].blank? %>
+                <p>Panier vide</p>
+                <% else %>
+                <% session[:cart].each do |element|  %>
+                  <p> <%= element["name"] %> </p>
+                  <p> <%= element["price_cents"] %>€ </p>
+                  <p> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %> </p>
+                  <hr>
+                <% end %>
+              </li>
+                <% @cart = 0 %>
+                 <% session[:cart].each do |element| %>
+                 <% @cart += element["price_cents"] %>
+                 <% end %>
+               <p> Total= <%= @cart %> $</p>
+
+              <%= link_to "Valider et commander", new_order_path, class: "btn btn primary", id: "valider" %>
+
+              <% end %>
+

@@ -27,42 +27,55 @@
       </div>
     </div>
 
-    <div class="connexion">
 
+
+<div class="connexion">
         <ul class="nav-item dropdown position-panier">
-            <a class="dropdown-toggle nav-item" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Panier</a>
 
-            <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
-             <li>
-                <% if session[:cart].blank? %>
-                <p>Panier vide</p>
-                <% else %>
-                <% session[:cart].each do |element|  %>
-                  <p> <%= element["name"] %> </p>
-                  <p> <%= element["price_cents"] %>€ </p>
-                  <p> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %> </p>
-                  <hr>
-                <% end %>
-              </li>
-                <% @cart = 0 %>
-                 <% session[:cart].each do |element| %>
-                 <% @cart += element["price_cents"] %>
-                 <% end %>
-               <p> Total= <%= @cart %> $</p>
+    <% @cart = 0 %>
+    <% @badge = 0 %>
+    <% session[:cart].each do |element| %>
+    <% @cart += element["price_cents"] %>
+    <% @badge += 1 %>
+    <% end %>
 
-              <%= link_to "Valider et commander", new_order_path, class: "btn btn primary", id: "valider" %>
 
-              <% end %>
-            </ul>
+  <a class="dropdown-toggle nav-item" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Panier <span class="badge"> <%= @badge %></span></a>
+             <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
+
+  <div class="container-panier">
+  <div class="shopping-cart">
+    <div class="shopping-cart-header">
+      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><%= @badge %></span>
+      <div class="shopping-cart-total">
+        <span class="lighter-text">Total:</span>
+        <span class="main-color-text"><%= @cart %>€</span>
+      </div>
+    </div> <!--end shopping-cart-header -->
 
 
 
 
+<ul class="shopping-cart-items">
+      <% if session[:cart].blank? %>
+    <p>Panier vide</p>
+    <% else %>
+    <% session[:cart].each do |element|  %>
+      <li class="clearfix">
+       <img  class="photo-cart" src= <%= element["photo_url"] %> alt="item1" />
+        <span class="item-name"> <%= element["name"] %> <%= element["price_cents"] %>€</span>
+<!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
+        <span class="item-quantity"> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %></span>
+        <span> </span>
+      </li>
+        <% end %>
+       <% end %>
 
-
-
-
-
+   <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>
+</ul>
+</div>
+</div>
+</div>
       <% if user_signed_in? %>
 
         <li class="nav-item dropdown">
@@ -86,11 +99,11 @@
         </li>
 
         <% else %>
-          <li class="nav-item">
+          <li class="dropdown-menu nav-item">
             <%= link_to "Login", new_user_session_path, class: "" %>
           </li>
         <% end %>
-         </div>
-      </div>
     </div>
   </div>
+</div>
+
