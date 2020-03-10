@@ -1,9 +1,11 @@
 
 <body>
 
+
 <div class="global-index">
     <br>
     <br>
+  <div class="container">
 
     <div class="nos-bocaux">
       <h2 class="nos-bocaux">Nos Bocaux</h2>
@@ -12,10 +14,8 @@
     <br>
     <br>
     <br>
-</div>
+    <br>
 
-    <br>
-    <br>
 
 <div class="container-index">
 
@@ -35,30 +35,25 @@
         </form>
     </div>
 
-          <div class="cards-recipes item">
-            <% @recipes.each do |recipe| %>
-              <div class="card-index" id="cardindex">
 
-                  <%= link_to recipe_path(recipe)do %>
-                  <%= image_tag recipe.photo_url, id: "image-index"  %>
-                  <% end %>
-
-
-
-                      <div class="nom-et-prix">
-                          <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
-                          <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
-                      </div>
-
-
-
-              </div>
-            <% end %>
-          </div>
-</div>
-    </div>
-
+   <div class="cards-recipes item">
+    <% @recipes.each do |recipe| %>
+      <div class="card-index">
+        <%= link_to recipe_path(recipe)do %>
+          <%= image_tag recipe.photo_url, id: "image-index"  %>
+        <% end %>
+        <div class="nom-et-prix">
+          <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
+          <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
+        </div>
+      </div>
+    <% end %>
+   </div>
 </div>
 
+ </div>
+
+</div>
+</div>
 
 </body>

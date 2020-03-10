@@ -19,6 +19,7 @@ a
   {
   color: white;
   padding: 0px 5px;
+
 }
 
 img {
@@ -58,8 +59,24 @@ li {
 .connexion {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+
+}
+.connexion li {
+margin: 0 1vh;
 
 }
 
+.position-panier {
+margin-top: 0vh;
+    margin-bottom: 0vh;
+    margin-right: 3vh;
+}
 
+.dropdown-menu {
+  border-radius: 10px;
+}
 
+.dropdown-item:hover {
+  background-color: transparent;
+}

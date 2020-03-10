@@ -110,12 +110,13 @@ body {
 }
 
 .para-prix {
-    font-size: 15px;
-    margin-top: none;
-    -webkit-box-align: end;
-    margin-right: -68px;
-    margin-left: 20px;
-    align-items: flex-end;
+  font-size: 15px;
+  margin-top: none;
+  -webkit-box-align: end;
+  margin-right: -68px;
+  margin-left: 20px;
+  align-items: right;
+  color: #004445;
 }
 
 #cardindex {
@@ -142,8 +143,9 @@ body {
 
 #image-index {
   height: 200px;
-  width: 270px;
+  width:100%;
   border-radius: 25px;
+  object-fit: cover;
 }
 
 .nom-plats {
@@ -164,3 +166,10 @@ body {
   // margin-left: -80px;
   // width: 80px;
 }
+
+.recipe-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
