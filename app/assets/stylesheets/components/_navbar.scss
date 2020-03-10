@@ -15,16 +15,16 @@
   align-items: center;
 }
 
-a
+.navbar a
   {
   color: white;
   padding: 0px 5px;
-
 }
 
-img {
+.navbar img {
   border-radius: 100%;
   display: flex;
+  padding-bottom: 2vh;
 }
 
 li {
@@ -179,6 +179,7 @@ nav {
 
     padding-top: 10vh;
     padding-left: 0vh;
+
 
       li {
         margin-bottom: 18px;
