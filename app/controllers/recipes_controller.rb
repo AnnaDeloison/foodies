@@ -10,8 +10,11 @@ class RecipesController < ApplicationController
    end
 
    def cards
+    if params[:maladie] == "Pas de filtre"
+      @recipes = Recipe.all
+    else
     @recipes = Recipe.joins(:troubles).where('troubles.name = ?', params[:maladie])
-    p @recipes.length
+    end
     render partial: "cards", locals: { recipes: @recipes }
    end
 
