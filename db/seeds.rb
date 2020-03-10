@@ -71,7 +71,7 @@ recipes11 = Recipe.create(sku: "Tartare de cabillaud exotique", name: "Tartare d
 
 description_avocat = "Smoothie onctueux en version salée grâce au bouillon de volaille qui lui apporte une saveur parfaite"
 apport_avocat = "La texture de l’avocat lui permet d’être transformé de solide en liquide tout en conservant sa saveur et ses propriétés nutritives. Grâce à l’avocat, la préparation est onctueuse, ce qui permet d’intégrer dans l’alimentation cet aliment riche en fibres et en vitamines sans mastication."
-recipes12 = Recipe.create (sku: "Smoothie à l'avocat", name: "Smoothie à l'avocat", description: description_avocat, apport: apport_avocat, price: 11.80, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Smoothie.jpg")
+recipes12 = Recipe.create(sku: "Smoothie à l'avocat", name: "Smoothie à l'avocat", description: description_avocat, apport: apport_avocat, price: 11.80, photo_url: "https://www.mieuxdansmonassietteaveclecancer.fr/wp-content/uploads/2016/07/Smoothie.jpg")
 
 
 
@@ -80,6 +80,9 @@ TroubleRecipe.create(recipe_id: recipes6.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes7.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes8.id, trouble_id: trouble1.id)
 TroubleRecipe.create(recipe_id: recipes9.id, trouble_id: trouble1.id)
+TroubleRecipe.create(recipe_id: recipes10.id, trouble_id: trouble1.id)
+TroubleRecipe.create(recipe_id: recipes11.id, trouble_id: trouble1.id)
+
 
 TroubleRecipe.create(recipe_id: recipes2.id, trouble_id: trouble2.id)
 TroubleRecipe.create(recipe_id: recipes3.id, trouble_id: trouble2.id)
