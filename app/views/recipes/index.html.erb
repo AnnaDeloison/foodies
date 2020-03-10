@@ -23,8 +23,17 @@
 
           <div class="filtres item col-sm-2">
             <h3 id="filtrer-par">Filtrer par</h3>
-            <h4 id="filtrer-par">Troubles</h4>
-            <p id="filtrer-par">Chimio</p>
+            <div>
+              <input type="radio" id="chimio" name="maladie" value="Chimiothérapie">
+              <label for="chimio">Chimiothérapie</label>
+            </div>
+            <div>
+              <input type="radio" id="digestion" name="maladie" value="Digestion">
+              <label for="digestion">Digestion</label>
+            </div>            <div>
+              <input type="radio" id="deglutition" name="maladie" value="Déglutition">
+              <label for="deglutition">Déglutition</label>
+            </div>
           </div>
 
 <div class="navbar-and-cards">
@@ -36,19 +45,10 @@
         </form>
     </div>
 
+   <div class="cards-recipes">
 
-   <div class="cards-recipes item">
-    <% @recipes.each do |recipe| %>
-      <div class="card-index">
-        <%= link_to recipe_path(recipe)do %>
-          <%= image_tag recipe.photo_url, id: "image-index"  %>
-        <% end %>
-        <div class="nom-et-prix">
-          <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
-          <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
-        </div>
-      </div>
-    <% end %>
+    <%= render 'cards', recipes: @recipes %>
+
    </div>
 </div>
 
