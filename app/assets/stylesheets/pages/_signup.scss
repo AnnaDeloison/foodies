@@ -5,7 +5,7 @@
   align-items: center;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
-  padding: 30px 30px 0px 40px;
+  padding: 30px 30px 2px 40px;
 }
 
 #inscription {
@@ -21,12 +21,12 @@
 #se-connecter {
   color: #004445;
   text-decoration: none;
-  margin-top: 25px;
-  margin-bottom: -50px;
-  margin-left: 33px;
+  margin: 25px 0px;
+  font-size: 1rem;
 }
 
 .creation-compte {
   font-size: 20px;
   color: #004445;
+  margin-top: 40px;
 }

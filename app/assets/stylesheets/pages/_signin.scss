@@ -1,17 +1,12 @@
 #sinscrire {
-  width: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 50px 20px 20px 11px;
+  width: 200px;
+  margin-top: 25px;
 }
 
 #mot-de-passe {
-  width: 197px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 11px;
+  width: 200px;
+  margin-top: 25px;
+
 }
 
 #text-sign-in {
@@ -46,9 +41,7 @@
 }
 
 .form-check {
-  // margin-left: 25px;
   opacity: 80%;
-  // margin-bottom: -200px;
 }
 
 #bouton-et-texte {
@@ -61,4 +54,15 @@
   margin-bottom: 70px;
   font-size: 20px;
   color: #004445;
+}
+
+#texte-inscription {
+  color: #004445;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-decoration: none;
+}
+
+.div-se-connecter {
+  margin: 30px 0px 20px 0px;
 }
