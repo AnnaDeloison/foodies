@@ -18,6 +18,7 @@
   display: flex;
   justify-content: space-between;
   // margin: 0px 100px;
+  margin-top: 150px;
   align-items: flex-start;
 }
 
@@ -58,6 +59,7 @@
   // margin-bottom: 20px;
   // margin-left: -20px;
   margin: 50px 0px;
+  width: 947px;
 }
 
 .champ {
@@ -138,12 +140,11 @@ body {
     -webkit-box-align: center;
     align-items: center;
     margin-left: 0px;
-    margin-right: 50px;
   }
 
 #image-index {
   height: 200px;
-  width:100%;
+  width: 270px;
   border-radius: 25px;
   object-fit: cover;
 }
@@ -154,6 +155,7 @@ body {
 
 .nos-bocaux {
   justify-content: center;
+  align-items: center;
   text-align: center;
   color: white;
 }
