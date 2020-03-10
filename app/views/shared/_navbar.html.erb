@@ -35,22 +35,22 @@
             <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
              <li>
                 <% if session[:cart].blank? %>
-                <p>panier vide</p>
+                <p>Panier vide</p>
                 <% else %>
                 <% session[:cart].each do |element|  %>
-                  <p >  <%= element["name"] %> -- <%= element["price_cents"] %> $
-                  <%= link_to "supprimer", delete_recipe_path(element) %> </p>
+                  <p> <%= element["name"] %> </p>
+                  <p> <%= element["price_cents"] %>€ </p>
+                  <p> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %> </p>
+                  <hr>
                 <% end %>
               </li>
-             <hr>
-
                 <% @cart = 0 %>
                  <% session[:cart].each do |element| %>
                  <% @cart += element["price_cents"] %>
                  <% end %>
                <p> Total= <%= @cart %> $</p>
 
-              <%= link_to "Valider et commander", new_order_path, class: "btn btn primary" %>
+              <%= link_to "Valider et commander", new_order_path, class: "btn btn primary", id: "valider" %>
 
               <% end %>
             </ul>
