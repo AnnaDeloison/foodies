@@ -15,8 +15,7 @@
   align-items: center;
 }
 
-.navbar a
-  {
+.navbar a {
   color: white;
   padding: 0px 5px;
 }
@@ -34,6 +33,7 @@ li {
 
 .menu-central a {
   margin: 20px;
+  text-decoration: none;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -79,11 +79,20 @@ margin-top: 0vh;
 
 .dropdown-menu {
   border-radius: 10px;
+  .dropdown-item {
+    color: #004445;
+  }
 }
 
 .dropdown-item:hover {
   background-color: transparent;
+  color: #004445;
 }
+
+
+
+
+
 
 $main-color: #6394F8;
 $light-text: #ABB0BE;
