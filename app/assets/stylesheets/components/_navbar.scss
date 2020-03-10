@@ -72,7 +72,7 @@ margin: 0 1vh;
   margin: 1vh 3vh;
 }
 .position-panier {
-margin-top: 0vh;
+    margin-top: 0vh;
     margin-bottom: 0vh;
     margin-right: 3vh;
     display: flex;
@@ -82,8 +82,8 @@ margin-top: 0vh;
   border-radius: 10px;
 }
 
-.transition {
-  transition-duration: 3s, 5s;
+#transition {
+  transition: 0,9s;
 }
 
 .dropdown-item:hover {
