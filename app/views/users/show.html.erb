@@ -10,6 +10,7 @@
 
   <h2 class="color-text-center profile-first"> Commandes futures </h2>
   <div class="cards item col-sm-10">
+    <% unless @user.orders.last.nil? %>
       <% if @user.orders.last["order_date"] > Time.now %>
       <% @item = Item.all.where('Order_id = ?', @user.orders.last.id) %>
       <% @item.each do |element| %>
@@ -29,6 +30,9 @@
         </div>
       <% end %>
       <% end %>
+      <% else %>
+       <p>Pas de commandes futures. Cliquez <%= link_to "ici", recipes_path %> pour voir nos merveilleuses recettes.</p>
+       <% end %>
   </div>
 
 
