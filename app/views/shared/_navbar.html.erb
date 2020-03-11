@@ -70,11 +70,11 @@
         <% id = id + 1 %>
         <% end %>
 
+<div id="photoprix">
         <span class="item-name"> <%= element["name"] %> <%= humanized_money_with_symbol(element["price_cents"] / 100.0) %></span>
 <!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
-
-
         <span class="item-quantity"> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %></span>
+        </div>
       </li>
           <% end %>
            <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>
