@@ -22,7 +22,7 @@
             </div>
             <div id="bouton-et-prix">
               <div>
-                <p>Livraison le <%= @user.orders.last["order_date"] %> à <%= @user.orders.last["order_hour"] %> </p>
+                <p>Livraison le <%= @user.orders.last["order_date"] %> à <%= @user.orders.last["order_hour"].hour %>:<%= @user.orders.last["order_hour"].min %></p>
               </div>
             </div>
           </div>
