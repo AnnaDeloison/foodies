@@ -5,14 +5,17 @@
     <div class="image-index " style="background: url(<%= image_url recipe.photo_url%>); background-size: cover">
 
       <p><%=recipe.apport%></p>
+
     </div>
 
     </div>
-     <% end %>
+
 
     <div class="nom-et-prix">
       <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
       <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
     </div>
+ <% end %>
   </div>
-<% end %>
+   <% end %>
+
