@@ -8,6 +8,8 @@
 TroubleRecipe.destroy_all
 Trouble.destroy_all
 Recipe.destroy_all
+User.destroy_all
+Item.destroy_all
 
 impact_chimio = "L’alimentation d’une personne traitée pour un cancer peut être considérablement transformée. Ces troubles peuvent être liés au cancer lui-même et à sa localisation, aux effets secondaires des traitements, mais aussi au stress et aux changements de rythme de vie. Parfois douloureux, ils peuvent causer des difficultés pour consommer les aliments et affecter considérablement le quotidien des patients. Ces modifications peuvent avoir un impact sur l’état général du patient, tant physique que psychologique."
 conseils_chimio = "Masquer le goût de la viande - Adoucir les légumes - Consommer des laitages - Limiter la viande rouge au profit d’autres sources protéiniques - Éviter le sel - Préférer les aliments forts en goût - Rehausser les saveurs en utilisant les herbes aromatiques, les épices et autres aromates - Utiliser les épices et les condiments - Privilégier les aliments froids - Éviter de mélanger les aliments - Consommer des chewing-gums ou des bonbons mentholés - Se rincer régulièrement la bouche"
