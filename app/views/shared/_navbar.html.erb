@@ -18,9 +18,9 @@
 
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              <%= link_to "Chimiothérapie", trouble_path(1), class: "dropdown-item" %>
-              <%= link_to "Digestion", trouble_path(2), class: "dropdown-item" %>
-              <%= link_to "Déglutition", trouble_path(3), class: "dropdown-item" %>
+              <%= link_to "Chimiothérapie", trouble_path(Trouble.where("name ILIKE ?", "Chimiothérapie")[0].id), class: "dropdown-item" %>
+              <%= link_to "Digestion", trouble_path(Trouble.where("name ILIKE ?", "Digestion")[0].id), class: "dropdown-item" %>
+              <%= link_to "Déglutition", trouble_path(Trouble.where("name ILIKE ?", "Déglutition")[0].id), class: "dropdown-item" %>
             </div>
           </li>
         </ul>
@@ -70,9 +70,8 @@
         <span class="item-name"> <%= element["name"] %> <%= element["price_cents"] %>€</span>
 <!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
         <span class="item-quantity"> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %></span>
-        <span> </span>
       </li>
-        <% end %>
+          <% end %>
        <% end %>
 
    <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>
@@ -81,11 +80,8 @@
 </div>
 </div>
       <% if user_signed_in? %>
-
-        <li class="nav-item dropdown">
-
-
-          <%= image_tag "https://media-exp1.licdn.com/dms/image/C5603AQHvPAOmAt9jMg/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=gnf-hifQs9ddzieqnbecwLZTBGWWpyoH3AGhM0qIGSo",
+          <li class="nav-item dropdown">
+            <%= image_tag "https://media-exp1.licdn.com/dms/image/C5603AQHvPAOmAt9jMg/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=gnf-hifQs9ddzieqnbecwLZTBGWWpyoH3AGhM0qIGSo",
                         width: 40,
                         height: 40,
                         crop: :fill,
@@ -95,18 +91,17 @@
                         'aria-expanded': false %>
 
 
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Profil", profile_path, class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-
-        <% else %>
-          <li class="dropdown-menu nav-item">
-            <%= link_to "Login", new_user_session_path, class: "" %>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <%= link_to "Profil", profile_path, class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
+              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+            </div>
           </li>
-        <% end %>
+      <% else %>
+          <li class="nav-item">
+            <%= link_to "Login", new_user_session_path, class: "dropdown-item" %>
+          </li>
+      <% end %>
     </div>
   </div>
 </div>

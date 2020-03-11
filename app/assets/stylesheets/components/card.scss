@@ -108,6 +108,14 @@ border: none;
   position: relative;
 }
 
+input[type="radio"] {
+  display: none;
+}
+
+input[type=radio]:checked+label {
+  font-weight: bold;
+}
+
 .link {
   text-decoration: none;
    color: #004445;
@@ -123,7 +131,7 @@ border: none;
 .card-index h2 {
   font-size: 18px;
   font-weight: bold;
-  margin: 0;
+  margin: 20px 0px;
   color: #004445;
 }
 
@@ -140,7 +148,9 @@ border: none;
 .cards-recipes-trouble {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 80px;
-  width: 100%;
+  grid-gap: 15px;
+  width: 1000px;
   border-radius: 10px;
+  margin: auto;
+  margin-left: 75px;
 }
