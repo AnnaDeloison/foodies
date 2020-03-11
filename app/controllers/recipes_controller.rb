@@ -2,6 +2,8 @@ class RecipesController < ApplicationController
    skip_before_action :authenticate_user!, only: :home, raise: false
 
    def index
+      p "je suis la"
+      p session[:cart]
       if params[:name].present?
         @recipes = Recipe.where("name ILIKE ?", "%#{params[:name]}%")
       else

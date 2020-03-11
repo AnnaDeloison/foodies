@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_135824) do
     t.string "city"
     t.string "zip_code"
     t.date "order_date"
-    t.string "order_hour"
+    t.time "order_hour"
     t.string "state"
     t.string "recipe_sku"
     t.integer "amount_cents", default: 0, null: false

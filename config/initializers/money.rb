@@ -1,6 +1,8 @@
 # https://github.com/RubyMoney/money#deprecation
 Money.locale_backend = :currency
 
+Money::Currency.all.find{|m| m.id == :eur}.instance_variable_set(:@symbol_first, false)
+
 MoneyRails.configure do |config|
   config.default_currency = :eur  # or :gbp, :usd, etc.
   # [...]
@@ -54,7 +56,7 @@ MoneyRails.configure do |config|
   #   iso_code:            "EU4",
   #   name:                "Euro with subunit of 4 digits",
   #   symbol:              "€",
-  #   symbol_first:        true,
+  #   symbol_first:        ,
   #   subunit:             "Subcent",
   #   subunit_to_unit:     10000,
   #   thousands_separator: ".",
