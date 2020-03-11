@@ -12,19 +12,16 @@ class OrdersController < ApplicationController
     # @recipe = Recipe.find(params[:recipe_id])
     # recipe_sku = Recipe.find(params[:recipe_id]).sku
     # amount = Recipe.find(params[:recipe_id]).price_cents
-    state = 'pending'
-    user = current_user
-    all_params = order_params.merge(user: user, state: state)
-    @order = Order.create!(all_params)
-    session[:cart].each do |element|
-    Item.create!(recipe_id: element["id"], order_id: @order.id)
-    end
+      state = 'pending'
+      user = current_user
+      all_params = order_params.merge(user: user, state: state)
+      @order = Order.new(all_params)
 
-    # cart.each ... Item.create
-
-    # session[:cart] = nil
-
-    line_items = @order.recipes.map do |recipe|
+      if @order.save
+        session[:cart].each do |element|
+          Item.create!(recipe_id: element["id"], order_id: @order.id)
+        end
+        line_items = @order.recipes.map do |recipe|
       {
         name: recipe.sku,
         images: [recipe.photo_url],
@@ -44,7 +41,18 @@ class OrdersController < ApplicationController
 
     @order.update(checkout_session_id: session.id)
     redirect_to new_order_payment_path(@order.id)
-  end
+
+        redirect_to orders_path
+      else
+        render :new
+      end
+
+
+    # cart.each ... Item.create
+
+    # session[:cart] = nil
+
+      end
 
   def success
     @order = Order.find(params[:order_id])
