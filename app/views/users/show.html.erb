@@ -10,18 +10,19 @@
 
   <h2 class="color-text-center profile-first"> Commandes futures </h2>
   <div class="cards item col-sm-10">
-    <% @user.orders.each do |element| %>
-      <% if element["order_date"] > Time.now %>
+      <% if @user.orders.last["order_date"] > Time.now %>
+      <% @item = Item.all.where('Order_id = ?', @user.orders.last.id) %>
+      <% @item.each do |element| %>
       <div class="card-trip" id="cardindex">
-        <%= image_tag Item.find(element.id).recipe.photo_url %>
+        <%= image_tag Recipe.find(element.recipe_id).photo_url %>
         <br>
           <div class="card-trip-index2">
             <div id="nom-et-prix">
-              <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
+              <h2 id="recipe-name"><%= Recipe.find(element.recipe_id).name %></h2>
             </div>
             <div id="bouton-et-prix">
               <div>
-                <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
+                <p>Livraison le <%= @user.orders.last["order_date"] %> à <%= @user.orders.last["order_hour"] %> </p>
               </div>
             </div>
           </div>
