@@ -1,11 +1,14 @@
 <% recipes.each do |recipe| %>
   <div class="card-index">
     <%= link_to recipe_path(recipe)do %>
-    <div class="image-index" style="background: url(<%= image_url recipe.photo_url%>); background-size: cover">
-      <p class="hidden-desc"><%=recipe.apport%></p>
-      <% end %>
+    <div class="hidden-desc">
+    <div class="image-index " style="background: url(<%= image_url recipe.photo_url%>); background-size: cover">
+
+      <p><%=recipe.apport%></p>
     </div>
 
+    </div>
+     <% end %>
 
     <div class="nom-et-prix">
       <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
