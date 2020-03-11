@@ -51,7 +51,7 @@
       <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><%= @badge %></span>
       <div class="shopping-cart-total">
         <span class="lighter-text">Total:</span>
-        <span class="main-color-text"><%= @cart %>€</span>
+        <span class="main-color-text"><%= @cart / 100.0 %>€</span>
       </div>
     </div> <!--end shopping-cart-header -->
 
@@ -69,8 +69,12 @@
        <img  class="photo-cart" src= <%= element["photo_url"] %> alt="item1" />
         <% id = id + 1 %>
         <% end %>
-        <span class="item-name"> <%= element["name"] %> <%= element["price_cents"] %>€</span>
+
+<div id="photoprix">
+        <span class="item-name"> <%= element["name"] %> <%= humanized_money_with_symbol(element["price_cents"] / 100.0) %></span>
+<!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
         <span class="item-quantity"> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %></span>
+        </div>
       </li>
           <% end %>
            <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>

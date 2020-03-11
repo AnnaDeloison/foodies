@@ -1,7 +1,8 @@
 .form-control {
-  border: 2px solid #004445;
+  border: 1px solid #004445;
   width: 412px;
   height: 35px;
+  border-radius: 5px;
 
 }
 
@@ -38,4 +39,15 @@
 
 input.form-control::placeholder, select.form-control::placeholder {
   opacity: 0.5;
+}
+
+label {
+  font-weight: 400;
+}
+
+#details {
+  text-align: center;
+  margin-top: -100px;
+  color: white;
+  font-size: 2rem;
 }

@@ -1,8 +1,11 @@
-
+  <head>
+    <title>Foodies | Nouvelle commande</title>
+  </head>
 
 <div class="global-index-signin" >
 
 </div>
+<h1 id="details">Adresse de livraison</h1>
 <div class="container">
 
     <div id="form-page-commander">
@@ -12,14 +15,14 @@
           <%= f.error_notification %>
           <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
           <%= f.input :recipe_id, :as => :hidden, :input_html => { :value => params[:recipe_id] } %>
-          <%= f.input :street_number, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Numéro de la rue", required: false, placeholder: "20..." %>
-          <%= f.input :street_name, input_html: {class: "form-control", id: "exampleInputPassword1"}, label: "Nom de la rue",required: false,  placeholder: "Rue des Capucins..." %>
-          <%= f.input :zip_code, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Code postal",required: false, placeholder: "69001..." %>
-          <%= f.input :city, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Ville",required: false, placeholder: "Lyon..." %>
+          <%= f.input :street_number, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Numéro de la rue", required: true, placeholder: "20..." %>
+          <%= f.input :street_name, input_html: {class: "form-control", id: "exampleInputPassword1"}, label: "Nom de la rue",required: true,  placeholder: "Rue des Capucins..." %>
+          <%= f.input :zip_code, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Code postal",required: true, placeholder: "69001..." %>
+          <%= f.input :city, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Ville",required: true, placeholder: "Lyon..." %>
           <div id="champ-date">
-            <%= f.input :order_date, input_html: {id: "exampleInputTime1"}, label: "Date",required: false, placeholder: "25" %>
+            <%= f.input :order_date, input_html: {id: "exampleInputTime1"}, label: "Date",required: true, placeholder: "25" %>
           </div>
-          <%= f.input :order_hour, input_html: {class: "form-control", id: "exampleInputEmail1"}, label: "Heure de la livraison",required: false, placeholder: "12:30..." %>
+          <%= f.input :order_hour, input_html: {class: "form-control", id: "exampleInputTime1"}, label: "Heure de la livraison",required: true, placeholder: "12:30..." %>
         </div>
 
         <div id="bouton-et-texte-payer">
