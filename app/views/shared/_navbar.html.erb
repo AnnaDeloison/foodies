@@ -64,13 +64,13 @@
       <li class="clearfix">
        <img  class="photo-cart" src= <%= element["photo_url"] %> alt="item1" />
         <span class="item-name"> <%= element["name"] %> <%= element["price_cents"] %>€</span>
-<!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
         <span class="item-quantity"> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %></span>
       </li>
           <% end %>
+           <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>
        <% end %>
 
-   <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>
+
 </ul>
 </div>
 </div>
