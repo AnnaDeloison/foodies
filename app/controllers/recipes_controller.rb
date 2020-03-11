@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
         @recipes = Recipe.where("name ILIKE ?", "%#{params[:name]}%")
       else
         @recipes = Recipe.all
+
       end
    end
 
