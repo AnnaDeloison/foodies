@@ -23,6 +23,7 @@
 .navbar a {
   color: white;
   padding: 0px 5px;
+  text-decoration: none;
 }
 
 .navbar img {
@@ -201,7 +202,7 @@ nav {
 
   .shopping-cart-items {
 
-    padding-top: 3vh;
+    padding-top: 5vh;
     padding-left: 0vh;
 
 
@@ -287,4 +288,8 @@ nav {
 #photoprix {
   display: flex;
   flex-direction:column;
+}
+
+.connexion a:hover {
+  color: white;
 }
