@@ -190,21 +190,28 @@ body {
 
 
 .hidden-desc p {
+  a {
+    text-decoration:none;
+  }
 color: white;
 opacity: 0%;
 margin-top: 16vh;
 padding: 8px 32px;
 backdrop-filter: blur(6px);
-backdrop-filter: brightness(80%);
+backdrop-filter: brightness(60%);
   transition: 1s;
-  font-size: 4vh;
-text-decoration: none;
+  font-size: 2vh;
+
+
 
 }
 
+.hidden-desc a {
+}
+
 .hidden-desc:hover p {
-  text-decoration: none;
   opacity: 100%;
+
 
 
 }
