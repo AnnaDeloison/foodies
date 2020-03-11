@@ -116,6 +116,10 @@ input[type=radio]:checked+label {
   font-weight: bold;
 }
 
+input[type=radio]+label {
+  cursor: pointer;
+}
+
 .link {
   text-decoration: none;
    color: #004445;
