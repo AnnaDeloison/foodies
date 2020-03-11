@@ -6,28 +6,30 @@
 
 
   <h1 class="color-text-center titre-centrer"> Bienvenue sur votre profil <%= @user.first_name %> <%= @user.last_name  %> </h1>
-  <div class="container2">
-  <h2 class="color-text-center"> Commandes futures </h2>
+
+
+  <h2 class="color-text-center profile-first"> Commandes futures </h2>
   <div class="cards item col-sm-10">
     <% @user.orders.each do |element| %>
       <% if element["order_date"] > Time.now %>
       <div class="card-trip" id="cardindex">
         <%= image_tag Item.find(element.id).recipe.photo_url %>
         <br>
-          <div class="card-trip-index">
+          <div class="card-trip-index2">
             <div id="nom-et-prix">
               <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
             </div>
             <div id="bouton-et-prix">
-            <div>
-              <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
-            </div>
+              <div>
+                <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
+              </div>
             </div>
           </div>
+        </div>
+      <% end %>
+      <% end %>
+  </div>
 
-      <% end %>
-      <% end %>
-      </div>
 
 
     <br>
@@ -43,7 +45,7 @@
     <div class="card-trip" id="cardindex">
       <%= image_tag Item.find(element.id).recipe.photo_url %>
       <br>
-        <div class="card-trip-index">
+        <div class="card-trip-index2">
           <div id="nom-et-prix">
             <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
           </div>
@@ -57,7 +59,7 @@
   <% end %>
   <% end %>
   </div>
-  </div>
-  </div>
+
+
 
 </div>
