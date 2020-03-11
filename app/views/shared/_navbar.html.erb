@@ -34,9 +34,11 @@
 
     <% @cart = 0 %>
     <% @badge = 0 %>
+    <% unless session[:cart].blank? %>
     <% session[:cart].each do |element| %>
     <% @cart += element["price_cents"] %>
     <% @badge += 1 %>
+    <% end %>
     <% end %>
 
 
