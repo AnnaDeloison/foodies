@@ -2,8 +2,7 @@ class RecipesController < ApplicationController
    skip_before_action :authenticate_user!, only: :home, raise: false
 
    def index
-      p "je suis la"
-      p session[:cart]
+      session[:cart]
       if params[:name].present?
         @recipes = Recipe.where("name ILIKE ?", "%#{params[:name]}%")
       else
@@ -29,7 +28,14 @@ class RecipesController < ApplicationController
   def add_cart
     @recipe = Recipe.find(params[:id])
     session[:cart] << @recipe
-    redirect_to recipe_path(@recipe)
+    @cart = 0
+    @badge = 0
+    unless session[:cart].blank?
+      session[:cart].each do |element|
+        @cart += element["price_cents"]
+        @badge += 1
+      end
+    end
   end
 
   def show_cart

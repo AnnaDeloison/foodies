@@ -38,7 +38,7 @@
 
           </div>
           <div id="bouton-et-texte-commander">
-            <%= link_to add_cart_path(@recipe), id: "bouton-commander" do %>
+            <%= link_to add_cart_path(@recipe), remote: true, id: "bouton-commander" do %>
               <%= image_tag "plus.svg", alt: "alttext", id: "plus-bouton-commander" %>
             <% end %>
             <h2 id="texte-commander"> COMMANDER </h2>

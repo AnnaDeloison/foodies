@@ -27,11 +27,6 @@
       </div>
     </div>
 
-
-
-<div class="connexion">
-        <ul class="nav-item dropdown position-panier">
-
     <% @cart = 0 %>
     <% @badge = 0 %>
     <% unless session[:cart].blank? %>
@@ -41,50 +36,11 @@
     <% end %>
     <% end %>
 
-
-  <a class="dropdown-toggle nav-item panier" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="" >Panier <span class="badge"> <%= @badge %></span></a>
-             <div class="dropdown-menu dropdown-menu-right" id="panier" aria-labelledby="navbarDropdown">
-
-  <div class="container-panier">
-  <div class="shopping-cart">
-    <div class="shopping-cart-header">
-      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><%= @badge %></span>
-      <div class="shopping-cart-total">
-        <span class="lighter-text">Total:</span>
-        <span class="main-color-text"><%= @cart / 100.0 %>€</span>
-      </div>
-    </div> <!--end shopping-cart-header -->
-
-
-
-
-<ul class="shopping-cart-items" id="transition">
-      <% if session[:cart].blank? %>
-    <p>Panier vide</p>
-    <% else %>
-    <% id = 0 %>
-    <% session[:cart].each do |element|  %>
-      <li class="clearfix">
-       <%= link_to recipe_url(session[:cart][id]["id"]) do  %>
-       <img  class="photo-cart" src= <%= element["photo_url"] %> alt="item1" />
-        <% id = id + 1 %>
-        <% end %>
-
-<div id="photoprix">
-        <span class="item-name"> <%= element["name"] %> <%= humanized_money_with_symbol(element["price_cents"] / 100.0) %></span>
-<!--         <span class="item-price"><%= element["price_cents"] %>€</span> -->
-        <span class="item-quantity"> <%= link_to "supprimer", delete_recipe_path(element), id: "panier-supprimer" %></span>
-        </div>
-      </li>
-          <% end %>
-           <%= link_to "Valider et commander", new_order_path, class: "button-cart btn btn primary", id: "valider" %>
-       <% end %>
-
-
-</ul>
-</div>
-</div>
-</div>
+<div class="connexion">
+        <ul class="nav-item dropdown position-panier">
+            <div class="test">
+              <%= render 'shared/panier' %>
+        </ul>
       <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <%= image_tag "https://media-exp1.licdn.com/dms/image/C5603AQHvPAOmAt9jMg/profile-displayphoto-shrink_200_200/0?e=1585180800&v=beta&t=gnf-hifQs9ddzieqnbecwLZTBGWWpyoH3AGhM0qIGSo",
@@ -109,6 +65,7 @@
           </li>
       <% end %>
     </div>
+  </div>
   </div>
 </div>
 
