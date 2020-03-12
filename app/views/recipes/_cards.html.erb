@@ -1,21 +1,18 @@
 <% recipes.each do |recipe| %>
+<%= link_to recipe_path(recipe) do %>
   <div class="card-index">
-    <%= link_to recipe_path(recipe)do %>
-    <div class="hidden-desc">
     <div class="image-index " style="background: url(<%= image_url recipe.photo_url%>); background-size: cover">
-
-      <p><%=recipe.apport%></p>
-
+      <div class="hidden-desc">
+        <p class="textdeco"><%=recipe.apport%></p>
+      </div>
     </div>
-
-    </div>
-
-
     <div class="nom-et-prix">
       <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
       <td><nobr><p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p></nobr></td>
     </div>
- <% end %>
+
   </div>
-   <% end %>
+      <% end %>
+    <% end %>
+
 

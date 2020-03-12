@@ -119,7 +119,9 @@ body {
     -webkit-box-direction: normal;
     flex-direction: row;
     justify-content: space-between;
+    transition: 1s;
 }
+
 
 .para-prix {
   font-size: 15px;
@@ -189,37 +191,62 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
   overflow: hidden;
+  transition: 1s;
+    -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .image-index:hover {
-
+  // height: 230px;
+  // width: 290px;
+  // transition: 1s;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  border-radius: 20px;
+  text-decoration: none !important;
+  overflow: scroll;
 }
 
+.card-index:hover{
+   border-radius: 25px;
+   text-decoration: none;
+   }
 
 
+.hidden-desc {
+  overflow: scroll;
+  text-decoration: none;
+}
+
+.textdeco:hover {
+  text-decoration: none !important;
+}
 
 .hidden-desc p {
-  a {
-    text-decoration:none;
-  }
-color: white;
-opacity: 0%;
-margin-top: 16vh;
-padding: 8px 32px;
-backdrop-filter: blur(6px);
-backdrop-filter: brightness(60%);
+  color: white;
+  opacity: 0%;
+  margin-top: 16vh;
+  padding: 8px 32px;
+  backdrop-filter: blur(6px);
+  backdrop-filter: brightness(60%);
   transition: 1s;
   font-size: 2vh;
-
-
-
+  overflow: scroll;
+  border-radius: 20px;
+  text-decoration: none;
 }
 
-.hidden-desc a {
+.hidden-desc a:link {
+  text-decoration: none;
 }
 
 .hidden-desc:hover p {
   opacity: 100%;
+  text-decoration: none;
+  transition: 1,3s;
+
 }
 
 .fa-search {
@@ -232,7 +259,7 @@ backdrop-filter: brightness(60%);
   background-color: white;
   padding: 0px;
   border: none;
-      margin-left: -40px;
+  margin-left: -40px;
 }
 
 .individual-filters {
