@@ -34,7 +34,7 @@ class OrdersController < ApplicationController
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: line_items,
-      success_url: success_url(@order.id),
+      success_url: profile_url,
       cancel_url: show_cart_url
     )
 
