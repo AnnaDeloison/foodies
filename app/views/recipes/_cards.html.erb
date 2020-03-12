@@ -13,7 +13,7 @@
 
     <div class="nom-et-prix">
       <h2 class="recipe-name"><%=recipe.name.capitalize%></h2>
-      <p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p>
+      <td><nobr><p class="para-prix"><%= humanized_money_with_symbol(recipe.price) %></p></nobr></td>
     </div>
  <% end %>
   </div>
