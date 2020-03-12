@@ -1,3 +1,5 @@
+ <div class="success-stripe"></div>
+
   <head>
     <title>Foodies | Profil</title>
   </head>
@@ -37,37 +39,34 @@
        <p>Pas de commandes futures. Cliquez <%= link_to "ici", recipes_path %> pour voir nos merveilleuses recettes.</p>
        <% end %>
   </div>
-
-
-
     <br>
     <br>
-
-
-
-    <h2 class="color-text-center"> Commandes passées </h2>
-    <br>
+    <h2 class="color-text-center profile-first"> Commandes passées </h2>
     <div class="cards item col-sm-10">
-    <% @user.orders.each do |element| %>
-      <% if element["order_date"] < Time.now %>
-    <div class="card-trip" id="cardindex">
-      <%= image_tag Item.find(element.id).recipe.photo_url %>
-      <br>
-        <div class="card-trip-index2">
-          <div id="nom-et-prix">
-            <h2 id="recipe-name"><%= Item.find(element.id).recipe.name %></h2>
+      <% unless @user.orders.last.nil? %>
+        <% if @user.orders.last["order_date"] < Time.now %>
+        <% @item = Item.all.where('Order_id = ?', @user.orders.last.id) %>
+        <% @item.each do |element| %>
+        <div class="card-trip" id="cardindex">
+          <%= image_tag Recipe.find(element.recipe_id).photo_url %>
+          <br>
+            <div class="card-trip-index2">
+              <div id="nom-et-prix">
+                <h2 id="recipe-name"><%= Recipe.find(element.recipe_id).name %></h2>
+              </div>
+              <div id="bouton-et-prix">
+                <div>
+                  <p>Livraison le <%= @user.orders.last["order_date"] %> à <%= @user.orders.last["order_hour"].hour %>:<%= @user.orders.last["order_hour"].min %></p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="bouton-et-prix">
-          <div>
-            <p>Livraison le <%= element["order_date"] %> à <%= element["order_hour"] %> </p>
-          </div>
-          </div>
-        </div>
+        <% end %>
+        <% end %>
+        <% else %>
+         <p>Pas de commandes passées. Cliquez <%= link_to "ici", recipes_path %> pour voir nos merveilleuses recettes.</p>
+         <% end %>
     </div>
-  <% end %>
-  <% end %>
-  </div>
-
 
 
 </div>
