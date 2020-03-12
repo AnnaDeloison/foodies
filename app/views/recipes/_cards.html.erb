@@ -1,9 +1,27 @@
+<!-- <div class="card-index">
+  <%# recipes.each do |recipe| %>
+    <div class="hidden-desc">
+      <%#= link_to recipe_path(recipe) do %>
+        <p class="textdeco"><%#=recipe.apport%></p>
+
+        <div class="nom-et-prix">
+          <h2 class="recipe-name"><%#=recipe.name.capitalize%></h2>
+          <td><nobr><p class="para-prix"><%#= humanized_money_with_symbol(recipe.price) %></p></nobr></td>
+        </div>
+
+      <%# end %>
+    </div>
+  <%# end %>
+</div> -->
+
+
+
 <% recipes.each do |recipe| %>
-<%= link_to recipe_path(recipe) do %>
-  <div class="card-index">
+<%= link_to recipe_path(recipe), class: 'card-index' do %>
+  <div>
     <div class="image-index " style="background: url(<%= image_url recipe.photo_url%>); background-size: cover">
       <div class="hidden-desc">
-        <p class="textdeco"><%=recipe.apport%></p>
+         <p><%=recipe.apport%></p>
       </div>
     </div>
     <div class="nom-et-prix">
@@ -12,7 +30,7 @@
     </div>
 
   </div>
-      <% end %>
+         <% end %>
     <% end %>
 
 
