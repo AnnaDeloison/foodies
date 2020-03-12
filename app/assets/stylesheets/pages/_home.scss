@@ -51,7 +51,7 @@
   background-size: cover;
   color: white;
   padding-top: 50px;
-  height: 75vh;
+  height: 65vh;
 }
 
 .food-specialiste h3 {
@@ -74,6 +74,12 @@
   margin-bottom: 100px;
   margin-top: 30px;
   border-radius: 10%;
+}
+
+.paragraphe-specialiste p {
+  height: 100px;
+  overflow: scroll;
+  padding-bottom: 10px;
 }
 
 .titre {
@@ -102,5 +108,10 @@
 
 #paragraphe-accueil {
   min-width: 450px;
-  font-size: smaller;
+  font-size: bold;
+
+}
+
+.text-center {
+  color: #004445;
 }
