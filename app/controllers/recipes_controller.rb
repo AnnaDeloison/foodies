@@ -43,7 +43,7 @@ class RecipesController < ApplicationController
   end
 
   def destroy_cart
-    @recipe_to_destroy = session[:cart].select { |n| n["id"] == params["id"].to_i }
+    @recipe_to_destroy = session[:cart].select { |n| n["id"] == params["id"].to_i || params["format"].to_i }
     session[:cart].reject! { |e| e["id"] == @recipe_to_destroy[0]["id"] }
     redirect_back(fallback_location: root_path)
   end
