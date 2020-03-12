@@ -23,6 +23,7 @@
 .navbar a {
   color: white;
   padding: 0px 5px;
+  text-decoration: none;
 }
 
 .navbar img {
@@ -36,6 +37,10 @@ li {
 }
 #panier-supprimer {
   color: black;
+  margin-left: 0px;
+  margin-left: -5px;
+  text-decoration: none;
+  color: #004243;
 }
 
 .menu-central li a  {
@@ -177,7 +182,7 @@ nav {
 }
 
 .shopping-cart {
-  margin: 20px 0;
+  margin: 0px;
   float: right;
   background: white;
   width: 320px;
@@ -197,7 +202,7 @@ nav {
 
   .shopping-cart-items {
 
-    padding-top: 10vh;
+    padding-top: 2vh;
     padding-left: 0vh;
 
 
@@ -214,6 +219,7 @@ nav {
       display: block;
       padding-top: 10px;
       font-size: 16px;
+      margin-top: -25px;
     }
 
     .item-price {
@@ -279,6 +285,15 @@ nav {
   margin-right: 2vh;
 }
 
+
 .test {
   display: flex;
+}
+#photoprix {
+  display: flex;
+  flex-direction:column;
+}
+
+.connexion a:hover {
+  color: white;
 }

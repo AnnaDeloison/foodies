@@ -38,11 +38,15 @@
     // padding-right: 150px;
     position: sticky;
     top: 50px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
 }
 
 .filtres h3 {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .filtres h4 {
@@ -61,7 +65,7 @@
   // margin-top: 20px;
   // margin-bottom: 20px;
   // margin-left: -20px;
-  margin: 50px 0px;
+  margin: 20px 0px 50px 0px;
   width: 947px;
       display: flex;
     flex-direction: row;
@@ -195,20 +199,26 @@ body {
 
 
 .hidden-desc p {
+  a {
+    text-decoration:none;
+  }
 color: white;
 opacity: 0%;
 margin-top: 16vh;
 padding: 8px 32px;
 backdrop-filter: blur(6px);
-backdrop-filter: brightness(80%);
+backdrop-filter: brightness(60%);
   transition: 1s;
-  font-size: 4vh;
-text-decoration: none;
+  font-size: 2vh;
+
+
 
 }
 
+.hidden-desc a {
+}
+
 .hidden-desc:hover p {
-  text-decoration: none;
   opacity: 100%;
 }
 
@@ -217,9 +227,14 @@ text-decoration: none;
   position: relative;
 }
 
+
 .threshold {
   background-color: white;
   padding: 0px;
   border: none;
       margin-left: -40px;
+}
+
+.individual-filters {
+margin-top: 20px;
 }
