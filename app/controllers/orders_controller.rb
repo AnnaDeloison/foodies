@@ -34,13 +34,14 @@ class OrdersController < ApplicationController
     session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: line_items,
-      success_url: profile_url,
+      success_url: "#{profile_url}?provenance=stripe",
       cancel_url: show_cart_url
     )
 
 
     @order.update(checkout_session_id: session.id)
     redirect_to new_order_payment_path(@order.id)
+
 
       else
         render :new
@@ -55,7 +56,6 @@ class OrdersController < ApplicationController
 
   def success
     @order = Order.find(params[:order_id])
-    session[:cart] = nil
   end
 
 private
